@@ -1,0 +1,25 @@
+{
+  "name": "javascriptfundamentals2019",
+  "version": "1.0.0",
+  "description": "AlbanyCanCode's JavaScript Fundamentals Class Fall 2019",
+  "engine": {
+    "node": "12.7.0"
+  },
+  "scripts": {
+    "test": "mocha --require @babel/register",
+    "testAll": "mocha ./test/**/*-test.js --require @babel/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbanyCanCodeCourses/JavaScriptFundamentals2019.git"
+  },
+  "author": "AlbanyCanCode",
+  "homepage": "https://github.com/AlbanyCanCodeCourses/JavaScriptFundamentals2019#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-arrays": "^2.0.0",
+    "mocha": "^6.2.0",
+    "sinon": "^7.4.0",
+    "sinon-chai": "^3.3.0"
+  }
+}
