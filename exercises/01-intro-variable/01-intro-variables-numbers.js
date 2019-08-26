@@ -5,17 +5,17 @@ function myName() {
   return myName;
 }
 
-const teachers = null;
 function editTeachers() {
   'use strict';
   // change code below this line so that we can set the variable.
+  const teachers = null;
 
-  // teachers  = 'Jamal Taylor & Matina Patsos'; <- this is invalid because teachers is a const. How can we fix this?
+  // teachers  = 'Jamal Taylor & Matina Patsos'; // this is invalid because teachers is a const. How can we fix this?
 
   return teachers;
 }
 
-/*** Create a variable that holds the sum of both arguments and return the sum ***/
+/*** Chnge the variable "sum" so that it will holds the sum of both arguments ***/
 function Add(a, b) {
   let sum = null;
 
@@ -27,33 +27,25 @@ function ageMeByAYear(age) {
   return age;
 }
 
-/*** Using --operator make me younger  ***/
+/*** Using -- operator make me younger  ***/
 function makeMeYoungerByAYear(age) {
   return age;
 }
 
-/** Using the modulus operator determine if the argument is an even or odd number */
-
-function isEvenOrOdd(number) {
-  let isEven;
-
-  return isEven;
-}
-
-/** Take the argument that will be a string and return an integer  */
+/** Take an argument that is a string and return an integer  */
 function convertStringToInt(str) {
   let int;
   return int;
 }
 
-/** Take the argument and return the position of the third letter **/
+/** Take an argument and return the position of the third letter **/
 function returnCharacterPositionFromString(str) {
   let characterPosition;
 
   return characterPosition;
 }
 
-/** Take the argument and use the method string method length to return the length of the argument */
+/** Take the argument and return the length of the argument */
 
 function stringLength(str) {
   let strLength;
@@ -74,7 +66,7 @@ function getLastCharacter(str) {
  *  ie: name = James,
  *  letter = J
  *
- *  returned value should be 0
+ *  return value should be 0
  *
  */
 function getTheCharacterPosition(name, letter) {
@@ -82,10 +74,10 @@ function getTheCharacterPosition(name, letter) {
   return characterPosition;
 }
 
-/** Using  the string method substring and any other string related methods return the last part of a city name
+/** Return the last part of a city name
  *
  *   i.e New York
- *   returns New York
+ *   returns York
  *
  *    i.e New Mexico
  *    returns Mexico
@@ -108,9 +100,9 @@ function getLargerNumber(arg1, arg2) {
   return largestNumber;
 }
 
-/*** A person just got married and the bride needs her last name replaced
- *   the function accepts two arguments first agrument being the fullname of the bride
- *    the second argument is the new last name the bride will receive after being marred.
+/*** A person just got married and they need their last name replaced.
+ * The function accepts two arguments first agrument being the fullname of the newlywed.
+ * The second argument is the new last name the newlywed will receive after being marred.
  *
  *   ie fullname =  Emily rose
  *    newLastName = Smith
@@ -127,7 +119,7 @@ function replaceLastName(fullname, newLastName) {
 }
 
 /***
- *  function accepts one argument and that argument will be a person's full name and the last name needs to be capitalized
+ *  Capitialize the first letter in a last name
  *  i.e John smith -> John Smith
  */
 
@@ -138,7 +130,7 @@ function capializeLastName(fullName) {
 }
 
 /***
- * Change the operator to use the strict equality operator
+ * Change below so that it will also compare data types
  *
  *
  */
@@ -169,6 +161,14 @@ function testStrictNotEqual(val) {
     return 'Not Equal';
   }
   return 'Equal';
+}
+
+/** Using the modulus operator determine if the argument is an even or odd number */
+
+function isEvenOrOdd(number) {
+  let isEven;
+
+  return isEven;
 }
 
 /***
