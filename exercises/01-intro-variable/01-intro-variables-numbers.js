@@ -53,7 +53,7 @@ function returnCharacterPositionFromString(word, letter) {
   return characterPosition;
 }
 
-/** Take the argument and use the method string method length to return the length of the argument */
+/** Take the argument and return the length of the argument */
 
 function stringLength(str) {
   let strLength;
@@ -80,7 +80,7 @@ function getLastCharacter(str) {
  *  ie: name = James,
  *  letter = J
  *
- *  returned value should be 0
+ *  return value should be 0
  *
  */
 function getTheCharacterPosition(name, letter) {
@@ -88,7 +88,7 @@ function getTheCharacterPosition(name, letter) {
   return characterPosition;
 }
 
-/** Using  the string method substring and any other string related methods return the last part of a city name
+/** Return the last part of a city name
  *
  *   i.e New York
  *   returns York
@@ -117,9 +117,9 @@ function getLargerNumber(arg1, arg2) {
   return largestNumber;
 }
 
-/*** A person just got married and the bride needs her last name replaced
- *   the function accepts two arguments first agrument being the fullname of the bride
- *    the second argument is the new last name the bride will receive after being marred.
+/*** A person just got married and they need their last name replaced.
+ * The function accepts two arguments first agrument being the fullname of the newlywed.
+ * The second argument is the new last name the newlywed will receive after being marred.
  *
  *   ie fullname =  Emily rose
  *    newLastName = Smith
@@ -136,7 +136,7 @@ function replaceLastName(fullname, newLastName) {
 }
 
 /***
- *  function accepts one argument and that argument will be a person's full name and the last name needs to be capitalized
+ *  capitalize the first letter in a last name
  *  i.e John smith -> John Smith
  */
 
@@ -147,7 +147,7 @@ function capitalizeLastName(fullName) {
 }
 
 /***
- * Change the operator to use the strict equality operator
+ * Change below so that it will also compare data types
  *
  *
  */
