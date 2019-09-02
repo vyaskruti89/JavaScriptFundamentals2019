@@ -1,42 +1,38 @@
 //set myName variable to your name;
-function myName() {
-  let myName;
+function myName(name) {
+  let myName = name;
 
   return myName;
 }
 
 const teachers = null;
-function editTeachers() {
-  'use strict';
+function setTeachersNames(teachersName) {
   // change code below this line so that we can set the variable.
-
-  // teachers  = 'Jamal Taylor & Matina Patsos'; <- this is invalid because teachers is a const. How can we fix this?
+  teachers = teachersName; //  <- this is  invalid because teachers is a const. How can we fix this?
 
   return teachers;
 }
 
-/*** Create a variable that holds the sum of both arguments and return the sum ***/
+/*** return the sum of both arguments  ***/
 function Add(a, b) {
-  let sum = null;
+  let sum;
 
   return sum;
 }
 
-/*** Using ++ operator add a year to the argument and make me older */
+/*** Using the increment operator add a year to the argument and make me older */
 function ageMeByAYear(age) {
   return age;
 }
 
-/*** Using --operator make me younger  ***/
+/*** Using the decrement operator make me age decrement by a year  ***/
 function makeMeYoungerByAYear(age) {
   return age;
 }
 
 /** Using the modulus operator determine if the argument is an even or odd number */
 
-function isEvenOrOdd(number) {
-  let isEven;
-
+function isEvenOrOdd(isEven) {
   return isEven;
 }
 
@@ -46,8 +42,12 @@ function convertStringToInt(str) {
   return int;
 }
 
-/** Take the argument and return the position of the third letter **/
-function returnCharacterPositionFromString(str) {
+/*  The function accepts twos argument first argument being the word and the second argument being the letter
+ *  return the index that the letter is located in the first argument.
+ *  For example, word = 'Washington", letter = a, and the return value should be 1.
+ *
+ */
+function returnCharacterPositionFromString(word, letter) {
   let characterPosition;
 
   return characterPosition;
@@ -61,7 +61,13 @@ function stringLength(str) {
   return strLength;
 }
 
-/*** Get the last character of the argument */
+/***  return the last character of the argument
+ *  ie Washington
+ *  should return n
+ *
+ *
+ */
+
 function getLastCharacter(str) {
   let lastCharacter;
 
@@ -85,10 +91,13 @@ function getTheCharacterPosition(name, letter) {
 /** Using  the string method substring and any other string related methods return the last part of a city name
  *
  *   i.e New York
- *   returns New York
+ *   returns York
  *
  *    i.e New Mexico
  *    returns Mexico
+ *
+ *    i.e San Diego
+ *    returns Diego
  */
 
 function getLastWordInPlaceName(city) {
@@ -131,10 +140,10 @@ function replaceLastName(fullname, newLastName) {
  *  i.e John smith -> John Smith
  */
 
-function capializeLastName(fullName) {
-  let capializedLastName;
+function capitalizeLastName(fullName) {
+  let capitalizeLastName;
 
-  return capializedLastName;
+  return capitalizeLastName;
 }
 
 /***
@@ -189,6 +198,13 @@ function testLogicalAnd(num) {
   return 'No';
 }
 
+/**
+ * Refactor the code down below to use the logical || operator
+ * testLogicalOr(0) should return No
+ * testLogicalOr(20) should return Yes
+ *
+ */
+
 function testLogicalOr(num) {
   // Only change code below this line
 
@@ -205,7 +221,7 @@ function testLogicalOr(num) {
 
 module.exports = {
   myName,
-  editTeachers,
+  setTeachersNames,
   Add,
   ageMeByAYear,
   makeMeYoungerByAYear,
@@ -219,7 +235,7 @@ module.exports = {
   getLargerNumber,
   compareEquality,
   replaceLastName,
-  capializeLastName,
+  capitalizeLastName,
   testStrictNotEqual,
   testLogicalAnd,
   testLogicalOr
