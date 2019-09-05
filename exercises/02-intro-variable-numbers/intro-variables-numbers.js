@@ -14,13 +14,13 @@ function setTeachersNames(teachersName) {
 }
 
 /*** return the sum of both arguments  ***/
-function Add(a, b) {
+function add(a, b) {
   let sum;
 
   return sum;
 }
 
-/*** Using the increment operator add a year to the argument and make me older */
+/*** Using the increment operator, add a year to the argument and make me older */
 function ageMeByAYear(age) {
   return age;
 }
@@ -30,26 +30,23 @@ function makeMeYoungerByAYear(age) {
   return age;
 }
 
-/** Using the modulus operator determine if the argument is an even or odd number */
-
-function isEvenOrOdd(isEven) {
-  return isEven;
-}
-
 /** Take the argument that will be a string and return an integer  */
 function convertStringToInt(str) {
   let int;
   return int;
 }
 
-/*  The function accepts twos argument first argument being the word and the second argument being the letter
- *  return the index that the letter is located in the first argument.
- *  For example, word = 'Washington", letter = a, and the return value should be 1.
+/*** Using the String method indexOf find the first position of the letter in the name  */
+/***
+ *
+ *  ie: name = James,
+ *  letter = J
+ *
+ *  return value should be 0
  *
  */
-function returnCharacterPositionFromString(word, letter) {
+function getTheCharacterPosition(name, letter) {
   let characterPosition;
-
   return characterPosition;
 }
 
@@ -74,21 +71,7 @@ function getLastCharacter(str) {
   return lastCharacter;
 }
 
-/*** Using the String method indexOf find the first position of the letter in the name  */
-/***
- *
- *  ie: name = James,
- *  letter = J
- *
- *  return value should be 0
- *
- */
-function getTheCharacterPosition(name, letter) {
-  let characterPosition;
-  return characterPosition;
-}
-
-/** Return the last part of a city name
+/** Return the last part of a place name
  *
  *   i.e New York
  *   returns York
@@ -100,10 +83,10 @@ function getTheCharacterPosition(name, letter) {
  *    returns Diego
  */
 
-function getLastWordInPlaceName(city) {
-  let place;
+function getLastWordInPlaceName(place) {
+  let newPlace;
 
-  return place;
+  return newPlace;
 }
 
 /***
@@ -112,7 +95,7 @@ function getLastWordInPlaceName(city) {
  */
 
 function getLargerNumber(arg1, arg2) {
-  var largestNumber;
+  let largestNumber;
 
   return largestNumber;
 }
@@ -121,7 +104,7 @@ function getLargerNumber(arg1, arg2) {
  * The function accepts two arguments first agrument being the fullname of the newlywed.
  * The second argument is the new last name the newlywed will receive after being marred.
  *
- *   ie fullname =  Emily rose
+ *   ie fullname =  Emily Rose
  *    newLastName = Smith
  *    returned value === Emily Smith
  *
@@ -129,14 +112,13 @@ function getLargerNumber(arg1, arg2) {
  *
  */
 
-function replaceLastName(fullname, newLastName) {
+function replaceLastName(fullName, newLastName) {
   let newFullName;
-
   return newFullName;
 }
 
 /***
- *  capitalize the first letter in a last name
+ *  Capitalize the first letter in a last name
  *  i.e John smith -> John Smith
  */
 
@@ -219,18 +201,23 @@ function testLogicalOr(num) {
   // Only change code above this line
 }
 
+/** Using the modulus operator determine if the argument is an even or odd number */
+
+function isEvenOrOdd(isEven) {
+  return isEven;
+}
+
 module.exports = {
   myName,
   setTeachersNames,
-  Add,
+  add,
   ageMeByAYear,
   makeMeYoungerByAYear,
   isEvenOrOdd,
   convertStringToInt,
-  returnCharacterPositionFromString,
+  getTheCharacterPosition,
   stringLength,
   getLastCharacter,
-  getTheCharacterPosition,
   getLastWordInPlaceName,
   getLargerNumber,
   compareEquality,

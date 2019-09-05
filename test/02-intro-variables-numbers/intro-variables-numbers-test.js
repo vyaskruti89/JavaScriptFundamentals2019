@@ -4,12 +4,12 @@ chai.use(require('chai-arrays'));
 const {
   myName,
   setTeachersNames,
-  Add,
+  add,
   ageMeByAYear,
   makeMeYoungerByAYear,
   isEvenOrOdd,
   convertStringToInt,
-  returnCharacterPositionFromString,
+  getTheCharacterPosition,
   stringLength,
   getLastCharacter,
   getLastWordInPlaceName,
@@ -34,7 +34,7 @@ describe('Intro Variables And Numbers', () => {
   });
 
   it('correctly adds both arguments and returns the sum', () => {
-    const sum = Add(5, 5);
+    const sum = add(5, 5);
     expect(sum).to.equal(10);
   });
 
@@ -48,21 +48,16 @@ describe('Intro Variables And Numbers', () => {
     expect(ageMeByAYear(18)).equal(17);
   });
 
-  it('should return true if the number is an even number or false if the number is an odd number', () => {
-    expect(isEvenOrOdd(2)).equal(true);
-    expect(isEvenOrOdd(3)).equal(false);
-  });
-
   it('should cast the string to an integer', () => {
     expect(convertStringToInt('5')).equal(5);
   });
 
   it('should return the index position of the word', () => {
-    expect(returnCharacterPositionFromString('James', 'a')).equal(1);
+    expect(getTheCharacterPosition('James', 'a')).equal(1);
   });
 
   it('should return the length of the string', () => {
-    expect(stringLength('Javascript').equal(9));
+    expect(stringLength('Javascript')).equal(10);
   });
 
   it('should return the last letter of the string', () => {
@@ -77,16 +72,18 @@ describe('Intro Variables And Numbers', () => {
     expect(getLargerNumber(5, 10)).equal(10);
   });
 
-  it('should compare the Equality of both arguments and return equal if both arguments are equal and if both arguments are not equal return not equal', () => {
-    expect(compareEquality(5, '5').equal('Not Equal'));
-  });
-
   it('should replace the last name of the full name with the new last name', () => {
     expect(replaceLastName('Gordon Ramsey', 'Smith')).equal('Gordon Smith');
   });
 
   it('should capitalize the last name', () => {
     expect(capitalizeLastName('Jane doe')).equal('Jane Doe');
+  });
+
+  it('should compare the Equality of both arguments and return equal if both arguments are equal and if both arguments are not equal return not equal', () => {
+    expect(compareEquality(5, '5')).equal('Not Equal');
+    expect(compareEquality('5', '5')).equal('Equal');
+    expect(compareEquality(5, 5)).equal('Equal');
   });
 
   it('should use  strict inequality operator and return the correct responses', () => {
@@ -105,5 +102,10 @@ describe('Intro Variables And Numbers', () => {
   it('should use the logical Or operator and return the correct responses', () => {
     expect(testLogicalOr(0)).equal('No');
     expect(testLogicalOr(20)).equal('Yes');
+  });
+
+  it('should return true if the number is an even number or false if the number is an odd number', () => {
+    expect(isEvenOrOdd(2)).equal(true);
+    expect(isEvenOrOdd(3)).equal(false);
   });
 });
