@@ -20,7 +20,7 @@ const {
   testStrictNotEqual,
   testLogicalAnd,
   testLogicalOr
-} = require('../../exercises/01-intro-variable/01-intro-variables-numbers');
+} = require('../../exercises/02-intro-variable-numbers/intro-variables-numbers');
 
 describe('Intro Variables And Numbers', () => {
   it('should return the students name', () => {
