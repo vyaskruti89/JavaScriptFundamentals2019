@@ -87,21 +87,25 @@ describe('Intro Variables And Numbers', () => {
   });
 
   it('should use  strict inequality operator and return the correct responses', () => {
-    expect(testStrictNotEqual(17)).equal('Equal');
-    expect(testStrictNotEqual('17')).equal('Not Equal');
+    expect(testStrictNotEqual(17, 17)).to.equal("Equal"); // should return "Equal"
+    expect(testStrictNotEqual("17", 17)).to.equal("Not Equal"); // should return "Not Equal"
+    expect(testStrictNotEqual(12, "bob")).to.equal("Not Equal"); // should return "Not Equal"
     expect(testStrictNotEqual.toString().includes('!==')).equal(true);
   });
 
   it('should use the logical And operator and return the correct responses', () => {
-    expect(testLogicalAnd(24)).equal('No');
-    expect(testLogicalAnd(50)).equal('Yes');
-    expect(testLogicalAnd(50)).equal('No');
-    expect(testLogicalAnd.toString().includes('&&')).equal(true);
+    expect(testLogicalAnd(9)).to.equal("Yes"); // should return "Yes"
+    expect(testLogicalAnd(6)).to.equal("Yes"); // should return "Yes"
+    expect(testLogicalAnd(10)).to.equal("No"); // should return "No"
+    expect(testLogicalAnd(5)).to.equal("No"); // should return "No"
+    expect(testLogicalAnd.toString()).includes('&&');
   });
 
   it('should use the logical Or operator and return the correct responses', () => {
-    expect(testLogicalOr(0)).equal('No');
-    expect(testLogicalOr(20)).equal('Yes');
+    expect(testLogicalOr(0)).to.equal("No");
+    expect(testLogicalOr(20)).to.equal("Yes");
+    expect(testLogicalOr(25)).to.equal("Yes");
+    expect(testLogicalOr.toString()).includes('||');
   });
 
   it('should return true if the number is an even number or false if the number is an odd number', () => {

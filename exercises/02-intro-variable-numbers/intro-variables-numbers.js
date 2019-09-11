@@ -5,9 +5,9 @@ function myName(name) {
   return myName;
 }
 
-const teachers = null;
 function setTeachersNames(teachersName) {
   // change code below this line so that we can set the variable.
+  const teachers = null;
   teachers = teachersName; //  <- this is  invalid because teachers is a const. How can we fix this?
 
   return teachers;
@@ -145,16 +145,17 @@ function compareEquality(a, b) {
  *   3 !== 3; // false
  *   3 !== '3'; // true
  *   4 !== 3; // true
- *   testStrictNotEqual(17) should return "Equal"
- *   testStrictNotEqual("17") should return "Not Equal"
- *   testStrictNotEqual(12) should return "Not Equal"
- *   testStrictNotEqual("bob")
+ * ```javascript
+ * testStrictNotEqual(17, 17) // should return "Equal"
+ * testStrictNotEqual("17", 17) // should return "Not Equal"
+ * testStrictNotEqual(12, "bob") // should return "Not Equal"
+ * ```
  *
  */
 
-function testStrictNotEqual(val) {
+function testStrictNotEqual(a, b) {
   // Only Change Code Below this Line
-  if (val) {
+  if (undefined) {
     // Only Change Code Above this Line
 
     return 'Not Equal';
@@ -163,42 +164,32 @@ function testStrictNotEqual(val) {
 }
 
 /***
- *  Refactor the code down below to use the logical && operator
- *   testLogicalAnd(0) should return "No"
- *   testLogicalAnd(24) should return "No"
- *   testLogicalAnd(50) should return "Yes"
- *   testLogicalAnd(51) should return "No"
- *   testLogicalAnd(75) should return "No"
+ *  Refactor the code down below to use the logical && operator.
+ *  The should return "Yes" when it is 6, 7, 8 and 9.
+ *  ```javascript
+ *  testLogicalAnd(9); // should return "Yes"
+ *  testLogicalAnd(6); // should return "Yes"
+ *  testLogicalAnd(10); // should return "No"
+ *  testLogicalAnd(5); // should return "No"
+ *  ```
+ *  You must use the && operator to complete the problem.
  */
 
 function testLogicalAnd(num) {
-  if (num > 5) {
-    if (num < 10) {
-      return 'Yes';
-    }
-  }
-  return 'No';
+  // code here
 }
 
 /**
  * Refactor the code down below to use the logical || operator
- * testLogicalOr(0) should return No
- * testLogicalOr(20) should return Yes
- *
+ * ```javascript
+ * testLogicalOr(0) // should return No
+ * testLogicalOr(20) // should return Yes
+ * testLogicalOr(25) // should return Yes
+ * ````
  */
 
 function testLogicalOr(num) {
-  // Only change code below this line
-
-  if (num > 10) {
-    return 'No';
-  }
-  if (num < 5) {
-    return 'No';
-  }
-  return 'Yes';
-
-  // Only change code above this line
+  // code here
 }
 
 /** Using the modulus operator determine if the argument is an even or odd number */
