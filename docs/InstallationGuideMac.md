@@ -40,7 +40,7 @@ export PATH="/usr/local/bin:$PATH"
 
 Git is version control software. It is used for sharing code, combining team members' code and managing different versions of your code.
 
-If you are not sure whether you have it installed, type `git --version` in your terminal. If you see output like this - _git version 2.22.0_ - then congratulations! You already have git installed and you can skip ahead to the next section.
+If you are not sure whether you have it installed, type `git --version` in your terminal. If you see output like this - _git version 2.23.0_ - then congratulations! You already have git installed and you can skip ahead to the next section.
 
 To install git, type this in your terminal:
 
@@ -54,7 +54,7 @@ When it's finished, type `git --version` to confirm that it has installed.
 
 Node.js is a JavaScript runtime engine. Basically, it allows you to run JavaScript programs outside of the browser.
 
-You will need to have the latest current version of Node installed as of August 2019 (12.7.0). If you already have Node.js installed, type `node -v`. If you do not have the latest version, see https://flaviocopes.com/how-to-update-node/ for instructions on how to upgrade.
+You will need to have the latest _Current_ version of Node installed as of September 2019 (12.10). If you already have Node.js installed, type `node -v`. If you do not have the latest version, see https://flaviocopes.com/how-to-update-node/ for instructions on how to upgrade.
 
 You should also update NPM. You can update it with:
 
@@ -98,19 +98,32 @@ You should configure your computer so that you can open Visual Studio Code via t
 
 ![](install-screens/vscode-mac-path.png)
 
+### Configuring Git to Open in Visual Studio Code
+
+You should have a terminal open in the bottom panel of the screen like this. (If you do not, press `control+ ~` to open it).
+
+![Mac Terminal](install-screens/terminal-mac.png)
+
+Click on it and enter the following:
+
+```bash
+git config --global core.editor "code --wait"
+git config --global -e
+```
+
+Restart Visual Studio Code.
+
 ### ESLint Extension
 
 Open the Extensions tab on the left, search for _ESLint_ and install _ESLint_.
 
 ![](install-screens/vscode-eslint.png)
 
-Once its installed, click on _Reload_.
-
-![](install-screens/vscode-eslint-reload.png)
+Once its installed, the _Install_ button may have transformed into a  _Reload_ button. If you see _Reload_, click on it.
 
 ### Quokka.js
 
-[Quokka.js](https://quokkajs.com/docs/?editor=vsc) is a sandbox that lets you play with JavaScript inside Visual Studio Code and other popular code editors. Search for _Quokka_ in the Extensions tab on the left and install _Quokka.js_. Once its installed, click on _Reload_.
+[Quokka.js](https://quokkajs.com/docs/?editor=vsc) is a sandbox that lets you play with JavaScript inside Visual Studio Code and other popular code editors. Search for _Quokka_ in the Extensions tab on the left and install _Quokka.js_. Once its installed, click on _Reload_ if necessary.
 
 If Quokka prompts you to go Pro, select _'Community' features only_.
 
@@ -118,23 +131,21 @@ If Quokka prompts you to go Pro, select _'Community' features only_.
 
 ### Prettier Extension (Optional)
 
-Prettier automatically formats your code and you can configure it to format your code whenever you save a file. Installing this is optional for now but we will require it for the final project.
+Prettier automatically formats your code and you can configure it to format your code whenever you save a file. Using this is optional for now but we will require it for our final group project.
 
-If you would like to use prettier, search for _Prettier_ in the Extensions tab on the left and install _Prettier - Code formatter_. Once its installed, click on _Reload_.
+If you would like to use prettier, search for _Prettier_ in the Extensions tab on the left and install _Prettier - Code formatter_. Once its installed, click on _Reload_ if necessary.
 
-You can now adjust Visual Studio's settings so that it will format on save and will play nicely with Prettier's defaults. Press `command+,` and click on the `{}` icon in the top right.
+You can now adjust Visual Studio's settings so that it will format on save and will play nicely with Prettier's defaults. Press `command+shift+p,` search for _settings_ and click on _Preferences: Open Settings (JSON))_.
 
-![](install-screens/settings-icon.png)
+![](install-screens/settings-search.png)
 
-In the right-hand panel underneath where it says "USER SETTINGS", append the options to the list and then save. Do not overwrite any settings that you already have.
+Paste the following into the JSON file. Do not overwrite any settings that you already have.
 
 ```json
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
 ```
-
-![](install-screens/prettier-settings.png)
 
 ## Chrome or Firefox (Recommended)
 

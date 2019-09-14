@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "AlbanyCanCode's JavaScript Fundamentals Class Fall 2019",
   "engine": {
-    "node": "12.7.0"
+    "node": "12.10.0",
+    "npm": "6.11.3"
   },
   "scripts": {
     "test": "mocha",
@@ -19,7 +20,7 @@
     "chai": "^4.2.0",
     "chai-arrays": "^2.0.0",
     "mocha": "^6.2.0",
-    "sinon": "^7.4.0",
+    "sinon": "^7.4.2",
     "sinon-chai": "^3.3.0"
   }
 }
