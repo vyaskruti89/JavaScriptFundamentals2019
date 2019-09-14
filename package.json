@@ -6,8 +6,8 @@
     "node": "12.7.0"
   },
   "scripts": {
-    "test": "mocha --require @babel/register",
-    "testAll": "mocha ./test/**/*-test.js --require @babel/register"
+    "test": "mocha",
+    "testAll": "mocha ./test/**/*-test.js"
   },
   "repository": {
     "type": "git",
