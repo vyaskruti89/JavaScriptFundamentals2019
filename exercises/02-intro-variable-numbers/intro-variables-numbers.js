@@ -198,7 +198,54 @@ function isEvenOrOdd(isEven) {
   return isEven;
 }
 
-module.exports = {
+/****
+ *  You are given a variable num:
+ *  Your task is to print:
+- ONE, if num is equal to  1.
+- TWO, if num is equal to  2.
+- THREE,if num is equal to 3.
+- FOUR, if num is equal to 4.
+- FIVE, if num is equal to 5.
+- SIX,  if num is equal to 6.
+- SEVEN,if num is equal to 7.
+- EIGHT,if num is equal to 8.
+- NINE, if num is equal to 9.
+ * 
+ * PLEASE TRY AGAIN, if  is none of the above
+ * 
+ *  *****/
+
+function caseInSwitch(num) {}
+
+/***
+ *  Create a function named timesFive
+ *  should multiply the argument by 5
+ *  timesFive(5)should return 25
+ *  timesFive(2)should return 10
+ *  timesFive(0)should return 0
+ *
+ *  if there is no arguments supplied to the function it should return 5
+ *   timesFive() should return 5
+ *
+ */
+
+/***
+ *  create a function called lowerCaseName that will return the string lowerCased
+ *   create two if statements. The first if statement will check for null or undefined and exit out of
+ *   the function early.
+ *   the second if statement will return the argument in lowercase format
+ *     i.e Hamburger --> hamburger
+ *
+ *
+ *
+ *
+ */
+
+// Write a function here
+
+/** Ignore below. It's for the tests. **/
+
+let myExports = {
   myName,
   setTeachersNames,
   add,
@@ -216,5 +263,24 @@ module.exports = {
   capitalizeLastName,
   testStrictNotEqual,
   testLogicalAnd,
-  testLogicalOr
+  testLogicalOr,
+  caseInSwitch,
+  timesFive: () => {},
+  lowerCaseName: () => {}
 };
+try {
+  //eslint-disable-next-line no-undef
+  if (timesFive) myExports.timesFive = timesFive;
+  // eslint-disable-next-line no-undef
+} catch (e) {}
+
+try {
+  //eslint-disable-next-line no-undef
+
+  // eslint-disable-next-line no-undef
+  if (lowerCaseName) {
+    myExports.lowerCaseName = lowerCaseName;
+  }
+} catch (e) {}
+
+module.exports = myExports;

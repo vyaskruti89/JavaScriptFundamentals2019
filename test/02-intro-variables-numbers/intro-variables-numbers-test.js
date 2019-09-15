@@ -19,7 +19,10 @@ const {
   capitalizeLastName,
   testStrictNotEqual,
   testLogicalAnd,
-  testLogicalOr
+  testLogicalOr,
+  caseInSwitch,
+  timesFive,
+  lowerCaseName
 } = require('../../exercises/02-intro-variable-numbers/intro-variables-numbers');
 
 describe('Intro Variables And Numbers', () => {
@@ -87,29 +90,51 @@ describe('Intro Variables And Numbers', () => {
   });
 
   it('should use  strict inequality operator and return the correct responses', () => {
-    expect(testStrictNotEqual(17, 17)).to.equal("Equal"); // should return "Equal"
-    expect(testStrictNotEqual("17", 17)).to.equal("Not Equal"); // should return "Not Equal"
-    expect(testStrictNotEqual(12, "bob")).to.equal("Not Equal"); // should return "Not Equal"
+    expect(testStrictNotEqual(17, 17)).to.equal('Equal'); // should return "Equal"
+    expect(testStrictNotEqual('17', 17)).to.equal('Not Equal'); // should return "Not Equal"
+    expect(testStrictNotEqual(12, 'bob')).to.equal('Not Equal'); // should return "Not Equal"
     expect(testStrictNotEqual.toString().includes('!==')).equal(true);
   });
 
   it('should use the logical And operator and return the correct responses', () => {
-    expect(testLogicalAnd(9)).to.equal("Yes"); // should return "Yes"
-    expect(testLogicalAnd(6)).to.equal("Yes"); // should return "Yes"
-    expect(testLogicalAnd(10)).to.equal("No"); // should return "No"
-    expect(testLogicalAnd(5)).to.equal("No"); // should return "No"
+    expect(testLogicalAnd(9)).to.equal('Yes'); // should return "Yes"
+    expect(testLogicalAnd(6)).to.equal('Yes'); // should return "Yes"
+    expect(testLogicalAnd(10)).to.equal('No'); // should return "No"
+    expect(testLogicalAnd(5)).to.equal('No'); // should return "No"
     expect(testLogicalAnd.toString()).includes('&&');
   });
 
   it('should use the logical Or operator and return the correct responses', () => {
-    expect(testLogicalOr(0)).to.equal("No");
-    expect(testLogicalOr(20)).to.equal("Yes");
-    expect(testLogicalOr(25)).to.equal("Yes");
+    expect(testLogicalOr(0)).to.equal('No');
+    expect(testLogicalOr(20)).to.equal('Yes');
+    expect(testLogicalOr(25)).to.equal('Yes');
     expect(testLogicalOr.toString()).includes('||');
   });
 
   it('should return true if the number is an even number or false if the number is an odd number', () => {
     expect(isEvenOrOdd(2)).equal(true);
     expect(isEvenOrOdd(3)).equal(false);
+  });
+
+  it('should return print out the correct value when given a certain argument', () => {
+    expect(caseInSwitch(1).to.equal('ONE'));
+    expect(caseInSwitch(5).to.equal('FIVE'));
+    expect(caseInSwitch(7).to.equal('SEVEN'));
+    expect(caseInSwitch(50).to.equal('PLEASE TRY AGAIN'));
+    expect(caseInSwitch(-1).to.equal('PLEASE TRY AGAIN'));
+  });
+
+  it('should multiply the argument by 5', () => {
+    expect(timesFive(5)).to.equal(25);
+    expect(timesFive(10)).to.equal(50);
+    expect(timesFive(2)).to.equal(10);
+  });
+
+  it('should check for null or undefined and if the argument is present will return the argument with it being lowercase', () => {
+    const goodFn = () => lowerCaseName(null);
+    expect(goodFn).to.not.throw();
+    expect(lowerCaseName('Samuel')).to.equal('samuel');
+    expect(lowerCaseName(null)).to.equal(undefined);
+    expect(lowerCaseName(undefined)).to.equal(undefined);
   });
 });
