@@ -44,13 +44,13 @@ If you intalled Visual Studio code, select _Use Visual Studio Code as Git's defa
 
 To avoid unnecessary merge conflicts (believe me, merge conflicts are very frustrating), please make sure _Checkout Windows-style, commit Unix-style line endings_ is selected.
 
-When you finish installing, you should see Git Bash on your computer. Open it, type `git --version` to confirm that it works. You should see something like _git version 2.22.0_. Then close out of Git Bash.
+When you finish installing, you should see Git Bash on your computer. Open it, type `git --version` to confirm that it works. You should see something like _git version 2.23.0_. Then close out of Git Bash.
 
 ## Node.js and NPM Packages
 
 Node.js is a JavaScript runtime engine. Basically, it allows you to run JavaScript programs outside of the browser.
 
-You will need to have the latest current version of Node installed as of August 2019 (12.7.0). If you already have Node.js installed, type `node -v` in Git Bash. If you do not have the latest version, you will need to remove Node.js and reinstall it again.
+You will need to have the latest _Current_ version of Node installed as of September 2019 (12.10). If you already have Node.js installed, type `node -v` in Git Bash. If you do not have the latest version, you will need to remove Node.js and reinstall it again.
 
 If Node.js is up-to-date, you should update NPM. You can update it with:
 
@@ -58,7 +58,7 @@ If Node.js is up-to-date, you should update NPM. You can update it with:
 npm install -g npm@latest
 ```
 
-To install Node.js, go to https://nodejs.org/en/ and click on the _12.7.0 Current_ version.
+To install Node.js, go to https://nodejs.org/en/ and click on the _12.10.X Current_ version.
 
 When it finishes downloading, open the downloaded file. Accept the License Agreement and all of the defaults. If you are asked to allow the app to make changes to your device, click on _Yes_.
 
@@ -94,13 +94,11 @@ Open the Extensions tab on the left, search for _ESLint_ and install _ESLint_.
 
 ![](install-screens/vscode-eslint.png)
 
-Once its installed, click on _Reload_.
-
-![](install-screens/vscode-eslint-reload.png)
+Once its installed, the _Install_ button may have transformed into a  _Reload_ button. If you see _Reload_, click on it.
 
 ### Quokka.js
 
-[Quokka.js](https://quokkajs.com/docs/?editor=vsc) is a sandbox that lets you play with JavaScript inside Visual Studio Code and other popular code editors. Search for _Quokka_ in the Extensions tab on the left and install _Quokka.js_. Once its installed, click on _Reload_.
+[Quokka.js](https://quokkajs.com/docs/?editor=vsc) is a sandbox that lets you play with JavaScript inside Visual Studio Code and other popular code editors. Search for _Quokka_ in the Extensions tab on the left and install _Quokka.js_. Once its installed, click on _Reload_ if necessary.
 
 If Quokka prompts you to go Pro, select _'Community' features only_.
 
@@ -112,23 +110,21 @@ If you get this Windows Security Alert from Windows when running Quokka, make su
 
 ### Prettier Extension (Optional)
 
-Prettier automatically formats your code and you can configure it to format your code whenever you save a file. Installing this is optional for now but we will require it for the final project.
+Prettier automatically formats your code and you can configure it to format your code whenever you save a file. Using this is optional for now but we will require it for our final group project.
 
-If you would like to use prettier, search for _Prettier_ in the Extensions tab on the left and install _Prettier - Code formatter_. Once its installed, click on _Reload_.
+If you would like to use prettier, search for _Prettier_ in the Extensions tab on the left and install _Prettier - Code formatter_. Once its installed, click on _Reload_ if necessary.
 
-You can now adjust Visual Studio's settings so that it will format on save and will play nicely with Prettier's defaults. Press `ctrl+,` and click on the `{}` icon in the top right.
+You can now adjust Visual Studio's settings so that it will format on save and will play nicely with Prettier's defaults. Press `command+shift+p,` search for _settings_ and click on _Preferences: Open Settings (JSON))_.
 
-![](install-screens/settings-icon.png)
+![](install-screens/settings-search.png)
 
-In the right-hand panel underneath where it says "USER SETTINGS", append the options to the list and then save. Do not overwrite any settings that you already have.
+Paste the following into the JSON file. Do not overwrite any settings that you already have.
 
 ```json
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
 ```
-
-![](install-screens/prettier-settings.png)
 
 ## Chrome or Firefox (Recommended)
 
