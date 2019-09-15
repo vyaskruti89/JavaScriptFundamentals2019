@@ -240,12 +240,11 @@ function caseInSwitch(num) {}
  *
  *
  */
-function lowerCaseName(str) {
-  if (!str) {
-    return;
-  }
-  return str.toLowerCase();
-}
+
+// Write a function here
+
+/** Ignore below. It's for the tests. **/
+
 let myExports = {
   myName,
   setTeachersNames,
