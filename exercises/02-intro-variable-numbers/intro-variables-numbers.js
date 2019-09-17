@@ -4,37 +4,49 @@ function myName(name) {
 
   return myName;
 }
+console.log(myName('Dan Lubbers'));
+
 
 function setTeachersNames(teachersName) {
   // change code below this line so that we can set the variable.
-  const teachers = null;
+  let teachers = null;
   teachers = teachersName; //  <- this is  invalid because teachers is a const. How can we fix this?
 
   return teachers;
 }
+console.log(setTeachersNames('Matina Patsos'));
+console.log(setTeachersNames('Jamal Taylor'));
+
 
 /*** return the sum of both arguments  ***/
 function add(a, b) {
-  let sum;
+  let sum = a + b;
 
   return sum;
 }
+console.log(add(2, 3));
+
 
 /*** Using the increment operator, add a year to the argument and make me older */
 function ageMeByAYear(age) {
-  return age;
+  return ++age;
 }
+console.log(ageMeByAYear(39));
+
 
 /*** Using the decrement operator make me age decrement by a year  ***/
 function makeMeYoungerByAYear(age) {
-  return age;
+  return --age;
 }
+console.log(makeMeYoungerByAYear(39));
 
 /** Take the argument that will be a string and return an integer  */
 function convertStringToInt(str) {
-  let int;
+  let int = +str;
   return int;
 }
+console.log('5');
+
 
 /*** Using the String method indexOf find the first position of the letter in the name  */
 /***
@@ -46,17 +58,22 @@ function convertStringToInt(str) {
  *
  */
 function getTheCharacterPosition(name, letter) {
-  let characterPosition;
+  let characterPosition = name.indexOf(letter);
   return characterPosition;
 }
+console.log(getTheCharacterPosition('James', 'J'));
+console.log(getTheCharacterPosition('sunny', 'n'));
+
 
 /** Take the argument and return the length of the argument */
 
 function stringLength(str) {
-  let strLength;
+  let strLength = str.length;
 
   return strLength;
 }
+console.log(stringLength('LengthOfAString'));
+
 
 /***  return the last character of the argument
  *  ie Washington
@@ -66,10 +83,12 @@ function stringLength(str) {
  */
 
 function getLastCharacter(str) {
-  let lastCharacter;
+  let lastCharacter = str[str.length - 1];
 
   return lastCharacter;
 }
+console.log(getLastCharacter('Washington'));
+
 
 /** Return the last part of a place name
  *
@@ -84,10 +103,12 @@ function getLastCharacter(str) {
  */
 
 function getLastWordInPlaceName(place) {
-  let newPlace;
+  let newPlace = place.split(' ')[1];
 
   return newPlace;
 }
+console.log(getLastWordInPlaceName('New Mexico'));
+
 
 /***
  *  Using Conditonal logic compare both arguments and return the largest argument
@@ -95,10 +116,12 @@ function getLastWordInPlaceName(place) {
  */
 
 function getLargerNumber(arg1, arg2) {
-  let largestNumber;
+  let largestNumber = arg1 > arg2 ? arg1 : arg2;
 
   return largestNumber;
 }
+console.log(getLargerNumber(20, 10));
+
 
 /*** A person just got married and they need their last name replaced.
  * The function accepts two arguments first agrument being the fullname of the newlywed.
@@ -113,9 +136,13 @@ function getLargerNumber(arg1, arg2) {
  */
 
 function replaceLastName(fullName, newLastName) {
-  let newFullName;
+  let firstName = fullName.split(' ')[0];
+  let newFullName = `${firstName} ${newLastName}`;
   return newFullName;
 }
+
+console.log(replaceLastName('Emily Rose', 'Smith'));
+
 
 /***
  *  Capitalize the first letter in a last name
@@ -123,10 +150,14 @@ function replaceLastName(fullName, newLastName) {
  */
 
 function capitalizeLastName(fullName) {
-  let capitalizeLastName;
-
-  return capitalizeLastName;
+   let firstName = fullName.split(' ')[0];
+   let lastName = fullName.split(' ')[1];
+   let capitalizeLastName = lastName.charAt(0).toUpperCase() + lastName.slice(1);
+  return `${firstName} ${capitalizeLastName}`;
 }
+
+console.log(capitalizeLastName('John smith'));
+
 
 /***
  * Change below so that it will also compare data types
@@ -134,7 +165,8 @@ function capitalizeLastName(fullName) {
  *
  */
 function compareEquality(a, b) {
-  if (a == b) {
+  // Use 'strict' equals === vs ==
+  if (a === b) {
     // Change this line
     return 'Equal';
   }
@@ -155,13 +187,18 @@ function compareEquality(a, b) {
 
 function testStrictNotEqual(a, b) {
   // Only Change Code Below this Line
-  if (undefined) {
+  // Use 'strict' not equals !==
+  if (a !== b) {
     // Only Change Code Above this Line
 
     return 'Not Equal';
   }
   return 'Equal';
 }
+
+console.log(testStrictNotEqual(17, 17)); // should return "Equal"
+console.log(testStrictNotEqual("17", 17)); // should return "Not Equal"
+console.log(testStrictNotEqual(12, "bob"));// should return "Not Equal"
 
 /***
  *  Refactor the code down below to use the logical && operator.
@@ -176,8 +213,13 @@ function testStrictNotEqual(a, b) {
  */
 
 function testLogicalAnd(num) {
-  // code here
+  
 }
+
+console.log(testLogicalAnd(9)); // should return "Yes"
+console.log(testLogicalAnd(6)); // should return "Yes"
+console.log(testLogicalAnd(10)); // should return "No"
+console.log(testLogicalAnd(5)); // should return "No"
 
 /**
  * Refactor the code down below to use the logical || operator
@@ -189,14 +231,29 @@ function testLogicalAnd(num) {
  */
 
 function testLogicalOr(num) {
-  // code here
+
 }
+
+console.log(testLogicalOr(0)); // should return No
+console.log(testLogicalOr(20)); // should return Yes
+console.log(testLogicalOr(25)); // should return Yes
+
 
 /** Using the modulus operator determine if the argument is an even or odd number */
 
 function isEvenOrOdd(isEven) {
-  return isEven;
+  return isEven % 2 === 0;
 }
+
+console.log(isEvenOrOdd(1));
+console.log(isEvenOrOdd(2));
+console.log(isEvenOrOdd(3));
+console.log(isEvenOrOdd(4));
+console.log(isEvenOrOdd(5));
+console.log(isEvenOrOdd(6));
+console.log(isEvenOrOdd(7));
+console.log(isEvenOrOdd(8));
+
 
 /****
  *  You are given a variable num:
@@ -215,8 +272,43 @@ function isEvenOrOdd(isEven) {
  * 
  *  *****/
 
-function caseInSwitch(num) {}
+function caseInSwitch(num) {
+  switch(num) {
+    case 1:
+      return 'ONE';
+    case 2:
+      return 'TWO';
+    case 3:
+      return 'THREE';
+    case 4:
+      return 'FOUR';
+    case 5:
+      return 'FIVE';
+    case 6:
+      return 'SIX';
+    case 7:
+      return 'SEVEN';
+    case 8:
+      return 'EIGHT';
+    case 9:
+      return 'NINE';
+    default: 
+      return 'PLEASE TRY AGAIN';
+      
+  }
+}
 
+  console.log(caseInSwitch(1));
+  console.log(caseInSwitch(2));
+  console.log(caseInSwitch(3));
+  console.log(caseInSwitch(4));
+  console.log(caseInSwitch(5));
+  console.log(caseInSwitch(6));
+  console.log(caseInSwitch(7));
+  console.log(caseInSwitch(8));
+  console.log(caseInSwitch(9));
+  console.log(caseInSwitch(10));
+  
 /***
  *  Create a function named timesFive
  *  should multiply the argument by 5
@@ -228,6 +320,15 @@ function caseInSwitch(num) {}
  *   timesFive() should return 5
  *
  */
+
+ function timesFive(num) {
+  return num * 5;
+ }
+
+console.log(timesFive(3));
+console.log(timesFive(4));
+console.log(timesFive(5));
+
 
 /***
  *  create a function called lowerCaseName that will return the string lowerCased
@@ -242,6 +343,15 @@ function caseInSwitch(num) {}
  */
 
 // Write a function here
+function lowerCaseName(str) {
+  if(!str) return "Found Null or Undefined, please type in a string!";
+  if(str) return str.toLowerCase();
+}
+
+console.log(lowerCaseName('Hamburger'));
+console.log(lowerCaseName());
+
+
 
 /** Ignore below. It's for the tests. **/
 
