@@ -16,7 +16,7 @@ function createAnArray() {
  */
 
 function accessingAnArray() {
-  const cars = ["BMW", "Honda", "Civic"]; // Do not change this line
+  const cars = ['BMW', 'Honda', 'Civic']; // Do not change this line
   // Code here
 }
 
@@ -63,7 +63,7 @@ function combineArray(array1, array2) {}
  * Return the object that matches a given ID.
  *
  * Once the object is found, you must break out of the loop for optimization purposes.
- * To Pass this challenge, break or return must be used.
+ * To Pass this challenge, break  must be used.
  *
  * @param  {array} arr
  * @param  {number} id
@@ -82,6 +82,11 @@ function combineArray(array1, array2) {}
  *    id: 30,
  *    firstName: 'Jane',
  *    lastName: 'Doe'
+ * }
+ * },{
+ *    id: 40,
+ *    firstName: 'Tom',
+ *    lastName: 'Hardy'
  * }];
  * findAndAbort(people, 20); // { id: 20, firstName: 'Cookie', lastName: 'Monster' }
  *
@@ -120,9 +125,9 @@ function removeDuplicates() {
 function accessObject() {
   // Do not change clothes here
   let clothes = {
-    hat: "ballcap",
-    shirt: "jersey",
-    shoes: "cleats"
+    hat: 'ballcap',
+    shirt: 'jersey',
+    shoes: 'cleats'
   };
   // Only change code below this line
   return;
@@ -137,8 +142,8 @@ function accessObject() {
 function createStudentObject() {
   // Do not change student here
   let student = {
-    firstname: "",
-    lastname: "",
+    firstname: '',
+    lastname: '',
     skills: []
   };
   // Only change code below this line.
@@ -167,8 +172,8 @@ function returnObjectProperties() {
   let dog = {
     tail: 1,
     legs: 4,
-    friends: ["Rusty", "Sparky"],
-    name: "Rocket"
+    friends: ['Rusty', 'Sparky'],
+    name: 'Rocket'
   };
   // Add code here
   // hint you need to return an array
@@ -194,35 +199,38 @@ function combineObject(obj1, obj2) {}
  *  After updateRecords(2548, "artist", ""), artist should not be set
  *  After updateRecords(1245, "tracks", "Addicted to Love"), tracks should have "Addicted to Love"as the last element
  *  After updateRecords(2468, "tracks", "Free"), tracks should have "1999"as the first element.
- *  After updateRecords(2548, "tracks", ""), tracksshould not be set
- *  After updateRecords(1245, "album", "Riptide"), albumshould be "Riptide"
+ *  After updateRecords(2548, "tracks", ""), tracks should not be set
+ *  After updateRecords(1245, "album", "Riptide"), album should be "Riptide"
  *
  *
  */
 
 function updateRecords(id, prop, value) {
   // Do not change collection here
+
   let collection = {
-    "2548": {
-      album: "Slippery When Wet",
-      artist: "Bon Jovi",
-      tracks: ["Let It Rock", "You Give Love a Bad Name"]
+    '2548': {
+      album: 'Slippery When Wet',
+      artist: 'Bon Jovi',
+      tracks: ['Let It Rock', 'You Give Love a Bad Name']
     },
-    "2468": {
-      album: "1999",
-      artist: "Prince",
-      tracks: ["1999", "Little Red Corvette"]
+    '2468': {
+      album: '1999',
+      artist: 'Prince',
+      tracks: ['1999', 'Little Red Corvette']
     },
-    "1245": {
-      artist: "Robert Palmer",
+    '1245': {
+      artist: 'Robert Palmer',
       tracks: []
     },
-    "5439": {
-      album: "ABBA Gold"
+    '5439': {
+      album: 'ABBA Gold'
     }
   };
   // Only change the code after this line
-  return;
+  //Logic Here
+
+  return collection; //You do not need to change this line.
 }
 
 module.exports = {
