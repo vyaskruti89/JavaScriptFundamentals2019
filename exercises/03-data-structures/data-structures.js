@@ -4,8 +4,8 @@
  */
 
 function createAnArray() {
-  let array = [];
-  /*** Add three items to the array ****/
+  let array = []; // Do not change this line
+  /* Add three items to the array here */
   return array;
 }
 
@@ -16,18 +16,24 @@ function createAnArray() {
  */
 
 function accessingAnArray() {
-  var cars = ['BMW', 'Honda', 'Civic'];
+  const cars = ["BMW", "Honda", "Civic"]; // Do not change this line
+  // Code here
 }
 
 /***
- * create two functions that are stored inside an array.
- *  1) first function will add two arguments i.e arr[0](10,10) = 20
- *  2) second function will subtract two arguments i.e arr[1](10,10) = 0
+ * Create an array that contain two functions:
+ * 1) the first function will add two arguments
+ * 2) the second function will subtract two arguments
+ * @returns {array} the array of functions
  *
- *
+ * @example
+ * addFunctionsIntoArray()[0](10, 10) // 20;
+ * addFunctionsIntoArray()[1](10, 10) // 0;
  */
 
-function addFunctionsIntoArray() {}
+function addFunctionsIntoArray() {
+  // Create and return an array here
+}
 
 /**
  * Loop through the array using a for loop and return the highest number
@@ -52,29 +58,40 @@ function highestNumber(array) {}
 function combineArray(array1, array2) {}
 
 /**
- * 1) This function will loop through an array of objects using the traditional for loop and will
- *      return an object that matches the id
+ * Given an array of objects, where each object has an ID,
+ * loop through an array using a for loop (not for ... of loop).
+ * Return the object that matches a given ID.
  *
- *  2) Once the object is found you must break out of the loop for optimization purposes
+ * Once the object is found, you must break out of the loop for optimization purposes.
+ * To Pass this challenge, break or return must be used.
  *
- *  @param  {array} arr
- *  @param  {number} id
- *   @example
- *    findAndAbort(i.e [{id:10,firstName:'John',lastName:'Smith'},{id:20,firstName:'Cookie',lastName:'Monster'},{id:30,firstName:'Jane',lastName:'Doe'}],20);
- *   //{id:20,firstName:'Cookie',lastName:'Monster'}
- *   //Please note, the loop never iterates over the last item, because we found our object. There is no need to continue looping.
+ * @param  {array} arr
+ * @param  {number} id
+ * @returns {object} with the matching id
  *
- *  // To Pass this challenge a break must be used.
+ * @example
+ * const people = [{
+ *    id: 10,
+ *    firstName: 'John',
+ *    lastName: 'Smith'
+ * },{
+ *    id: 20,
+ *    firstName: 'Cookie',
+ *    lastName: 'Monster'
+ * },{
+ *    id: 30,
+ *    firstName: 'Jane',
+ *    lastName: 'Doe'
+ * }];
+ * findAndAbort(people, 20); // { id: 20, firstName: 'Cookie', lastName: 'Monster' }
  *
- *  @returns {object} that is found in the array
- *
- *
+ * // Please note, the loop never iterates over the last item, because we found our object. There is no need to continue looping.
  */
 
 function findAndAbort(arr, id) {}
 
 /**
- * A palindrom is a word, phrase, or sequence that reads the same backward as forward, e.g., madam, nurses or run.
+ * A palindrom is a word, phrase, or sequence that reads the same backward as forward, e.g., madam or racecar.
  * Checks to see if a string is a palindrome.
  * Use the split and join methods to solve this problem
  * @param  {[string]}  string
@@ -85,33 +102,30 @@ function findAndAbort(arr, id) {}
 function isPalindrome(str) {}
 
 /***
- *
+ * Use sets to remove duplicate elements from an array
  * @return {array}
  */
 
 function removeDuplicates() {
-  // Use Sets to remove duplicate elements from the array
-  let numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
+  let numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5]; // You can change this line
 
   /** Return the an array of unique values */
   return;
 }
 
 /**
- * Access testObj and return the value for hat inside clothes (which should be ball cap)
+ * Return the value for hat inside clothes (which should be ball cap)
  * @return {string} type of hat
  */
 function accessObject() {
+  // Do not change clothes here
   let clothes = {
-    hat: 'ballcap',
-    shirt: 'jersey',
-    shoes: 'cleats'
+    hat: "ballcap",
+    shirt: "jersey",
+    shoes: "cleats"
   };
   // Only change code below this line
-
-  let hatValue = clothes; // Change only this line of code
-
-  return hatValue;
+  return;
 }
 
 /**
@@ -121,9 +135,10 @@ function accessObject() {
  */
 
 function createStudentObject() {
-  var student = {
-    firstname: '',
-    lastname: '',
+  // Do not change student here
+  let student = {
+    firstname: "",
+    lastname: "",
     skills: []
   };
   // Only change code below this line.
@@ -132,38 +147,39 @@ function createStudentObject() {
 }
 
 /**
- * Make an object that represents a dog called myDog which contains the keys
+ * Make an object "myDog" that represents a dog. It should contain the properties
  * "name", "legs", "tails" and "owners". Each should have a value.
- * "Owners" should be an array with a list of owners names.
+ * "Owners" should be an array with a list of owner names.
  * @return {object}
  */
 
 function createDogObject() {}
 
 /**
- * Combines two objects into one
- * @param  {object} obj1
- * @param  {object} obj2
- * @return {object} obj1 and obj2 combined
- */
-
-/**
- *  Using Object.keys return all the properties contained in the object.
+ *  Using Object.keys, return all the properties contained in the object.
  *  The properties are name, legs, tails and friends.
  *
  *  @return {array}
  */
 
 function returnObjectProperties() {
+  // Do not change dog here
   let dog = {
     tail: 1,
     legs: 4,
-    friends: ['Rusty', 'Sparky'],
-    name: 'Rocket'
+    friends: ["Rusty", "Sparky"],
+    name: "Rocket"
   };
-  //Add code here
-  //hint you need to return an array
+  // Add code here
+  // hint you need to return an array
 }
+
+/**
+ * Combine two objects into one
+ * @param  {object} obj1
+ * @param  {object} obj2
+ * @return {object} obj1 and obj2 combined
+ */
 
 function combineObject(obj1, obj2) {}
 
@@ -185,26 +201,28 @@ function combineObject(obj1, obj2) {}
  */
 
 function updateRecords(id, prop, value) {
-  /**** Don't need to modify this at all */
+  // Do not change collection here
   let collection = {
-    '2548': {
-      album: 'Slippery When Wet',
-      artist: 'Bon Jovi',
-      tracks: ['Let It Rock', 'You Give Love a Bad Name']
+    "2548": {
+      album: "Slippery When Wet",
+      artist: "Bon Jovi",
+      tracks: ["Let It Rock", "You Give Love a Bad Name"]
     },
-    '2468': {
-      album: '1999',
-      artist: 'Prince',
-      tracks: ['1999', 'Little Red Corvette']
+    "2468": {
+      album: "1999",
+      artist: "Prince",
+      tracks: ["1999", "Little Red Corvette"]
     },
-    '1245': {
-      artist: 'Robert Palmer',
+    "1245": {
+      artist: "Robert Palmer",
       tracks: []
     },
-    '5439': {
-      album: 'ABBA Gold'
+    "5439": {
+      album: "ABBA Gold"
     }
   };
+  // Only change the code after this line
+  return;
 }
 
 module.exports = {
