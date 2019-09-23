@@ -1,11 +1,11 @@
 /**
- * Add three programming languages and return the languages array
- * @return {array}
+ * Add three more programming languages and return the languages array
+ * @return {array} an array with four items
  */
 
 function createAnArray() {
-  let array = []; // Do not change this line
-  /* Add three items to the array here */
+  let array = ["JavaScript"]; // Do not change this line
+  /* Add three more items to the array here */
   return array;
 }
 
@@ -16,7 +16,7 @@ function createAnArray() {
  */
 
 function accessingAnArray() {
-  const cars = ['BMW', 'Honda', 'Civic']; // Do not change this line
+  const cars = ["BMW", "Honda", "Civic"]; // Do not change this line
   // Code here
 }
 
@@ -36,12 +36,12 @@ function addFunctionsIntoArray() {
 }
 
 /**
- * Loop through the array using a for loop and return the highest number
+ * Loop through the array using a for loop (or for ... of loop) and return the highest number
  * @param  { array }
  * @returns { number } the highest number that was in the array
  * @example
- * highestNumber([1, 2, 3]) // [3]
- * highestNumber([5, 1, 2, 3, 10]) // [10]
+ * highestNumber([1, 10, 2, 3, 4]) // 10
+ * highestNumber([-1, -5, -4]) // -1
  *
  **/
 function highestNumber(array) {}
@@ -59,7 +59,7 @@ function combineArray(array1, array2) {}
 
 /**
  * Given an array of objects, where each object has an ID,
- * loop through an array using a for loop (not for ... of loop).
+ * loop through an array using a for loop (or for ... of loop).
  * Return the object that matches a given ID.
  *
  * Once the object is found, you must break out of the loop for optimization purposes.
@@ -96,7 +96,7 @@ function combineArray(array1, array2) {}
 function findAndAbort(arr, id) {}
 
 /**
- * A palindrom is a word, phrase, or sequence that reads the same backward as forward, e.g., madam or racecar.
+ * A palindrome is a word, phrase, or sequence that reads the same backward as forward, e.g., madam or racecar.
  * Checks to see if a string is a palindrome.
  * Use the split and join methods to solve this problem
  * @param  {[string]}  string
@@ -125,9 +125,9 @@ function removeDuplicates() {
 function accessObject() {
   // Do not change clothes here
   let clothes = {
-    hat: 'ballcap',
-    shirt: 'jersey',
-    shoes: 'cleats'
+    hat: "ballcap",
+    shirt: "jersey",
+    shoes: "cleats"
   };
   // Only change code below this line
   return;
@@ -142,12 +142,11 @@ function accessObject() {
 function createStudentObject() {
   // Do not change student here
   let student = {
-    firstname: '',
-    lastname: '',
+    firstName: "",
+    lastName: "",
     skills: []
   };
-  // Only change code below this line.
-
+  // Add code here
   return student;
 }
 
@@ -172,8 +171,8 @@ function returnObjectProperties() {
   let dog = {
     tail: 1,
     legs: 4,
-    friends: ['Rusty', 'Sparky'],
-    name: 'Rocket'
+    friends: ["Rusty", "Sparky"],
+    name: "Rocket"
   };
   // Add code here
   // hint you need to return an array
@@ -189,48 +188,54 @@ function returnObjectProperties() {
 function combineObject(obj1, obj2) {}
 
 /**
- * @param {Number} = id
- * @param {String} = string
- * @param {String} = value
+ * Find a record with the matching id in a collection of records.
+ * If the value is truthy, then swap out one of the records values with a new property.
+ * If the original value is an array, it should add the new value to the array.
+ * @param {Number} id what record to change
+ * @param {String} property what property to replace
+ * @param {String} value new value to replace with
  *
- *  @examples
- *  updateRecords(5439, "artist", "ABBA"), artist should be "ABBA"
- *  updateRecords(5439, "tracks", "Take a Chance on Me") tracks should have "Take a Chance on Me"as the last element.
- *  After updateRecords(2548, "artist", ""), artist should not be set
- *  After updateRecords(1245, "tracks", "Addicted to Love"), tracks should have "Addicted to Love"as the last element
- *  After updateRecords(2468, "tracks", "Free"), tracks should have "1999"as the first element.
- *  After updateRecords(2548, "tracks", ""), tracks should not be set
- *  After updateRecords(1245, "album", "Riptide"), album should be "Riptide"
+ *  @example
+ *  updateRecords(5439, "artist", "ABBA"); // artist should be "ABBA"
+ *  updateRecords(5439, "tracks", "Take a Chance on Me"); // tracks should be ["Old Track", "Take a Chance on Me""]
+ *  updateRecords(2548, "artist", ""); // artist should not change
+ *  updateRecords(1245, "tracks", "Addicted to Love"); // tracks should be ["Old Track", "Addicted to Love""]
+ *  updateRecords(2468, "tracks", "Free"); // tracks should have "1999"as the first element.
+ *  updateRecords(2548, "tracks", ""); // tracks should not change
+ *  updateRecords(1245, "album", "Riptide"); // album should be "Riptide"
  *
  *
  */
 
-function updateRecords(id, prop, value) {
+function updateRecords(id, property, value) {
   // Do not change collection here
 
   let collection = {
-    '2548': {
-      album: 'Slippery When Wet',
-      artist: 'Bon Jovi',
-      tracks: ['Let It Rock', 'You Give Love a Bad Name']
+    // id
+    "2548": {
+      album: "Slippery When Wet",
+      artist: "Bon Jovi",
+      tracks: ["Let It Rock", "You Give Love a Bad Name"]
     },
-    '2468': {
-      album: '1999',
-      artist: 'Prince',
-      tracks: ['1999', 'Little Red Corvette']
+    // id
+    "2468": {
+      album: "1999",
+      artist: "Prince",
+      tracks: ["1999", "Little Red Corvette"]
     },
-    '1245': {
-      artist: 'Robert Palmer',
+    // id
+    "1245": {
+      artist: "Robert Palmer",
       tracks: []
     },
-    '5439': {
-      album: 'ABBA Gold'
+    // id
+    "5439": {
+      album: "ABBA Gold"
     }
   };
   // Only change the code after this line
-  //Logic Here
-
-  return collection; //You do not need to change this line.
+  // Logic Here
+  return collection; // You do not need to change this line.
 }
 
 module.exports = {
