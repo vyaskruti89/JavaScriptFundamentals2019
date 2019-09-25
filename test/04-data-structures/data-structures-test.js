@@ -17,7 +17,7 @@ const {
   updateRecords,
   findAndAbort,
   addFunctionsIntoArray
-} = require("../../exercises/03-data-structures/data-structures");
+} = require("../../exercises/04-data-structures/data-structures");
 
 describe("Data structures", () => {
   it("should return an array with three values", () => {
