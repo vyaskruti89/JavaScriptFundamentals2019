@@ -25,8 +25,9 @@ function functionMaker() {}
  *  @example
  *  confirmEnding("Jamal", "l") // true
  *  confirmEnding("Matina", "a") // true
- *  confirmEnding("stacy",l) // false
- *
+ *  confirmEnding("stacy", "l") // false
+ *  confirmEnding("andrea", "a") // true
+ *  confirmEnding("Clifford", "ord"); // true
  *
  */
 

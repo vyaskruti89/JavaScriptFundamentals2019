@@ -22,5 +22,7 @@ describe("9-30-challenges", () => {
     expect(confirmEnding("James", "s")).to.equal(true);
     expect(confirmEnding("Mike", "s")).to.equal(false);
     expect(confirmEnding("rick", "f")).to.equal(false);
+    expect(confirmEnding("andrea", "a")).to.equal(true);
+    expect(confirmEnding("Clifford", "ord")).to.equal(true);
   });
 });
