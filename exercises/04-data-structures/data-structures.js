@@ -207,7 +207,7 @@ function combineObject(obj1, obj2) {}
  *
  */
 
-function updateRecords(id, property, value) {
+function updateRecords(id, prop, value) {
   // Do not change collection here
 
   let collection = {
@@ -235,7 +235,6 @@ function updateRecords(id, property, value) {
   };
   // Only change the code after this line
   // Logic Here
-  return collection; // You do not need to change this line.
 }
 
 module.exports = {

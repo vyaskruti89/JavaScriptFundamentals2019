@@ -163,33 +163,47 @@ describe("Data structures", () => {
    *  After updateRecords(1245, "tracks", "Addicted to Love"), tracks should have "Addicted to Love"as the last element
    *  After updateRecords(2468, "tracks", "Free"), tracks should have "1999"as the first element.
    *  After updateRecords(2548, "tracks", ""), tracks should not be set
-   *  After updateRecords(1245, "album", "Riptide"), albumshould be "Riptide"
+   *  After updateRecords(1245, "album", "Riptide"), albums should be "Riptide"
    */
 
-  it("should update the record collection from the arguments", () => {
-    let updatedRecord = updateRecords(5439, "artist", "ABBA");
-    expect(updatedRecord["5439"]["artist"]).to.equal("ABBA");
+  describe("Data structures", () => {
+    it('updateRecords(5439, "artist", "ABBA"), artist should be "ABBA"', () => {
+      let updatedRecord = updateRecords(5439, "artist", "ABBA");
+      expect(updatedRecord["5439"]["artist"]).to.equal("ABBA");
+    });
 
-    updatedRecord = updateRecords(5439, "tracks", "Take a Chance on Me");
+    it('updateRecords(5439, "tracks", "Take a Chance on Me") tracks should have "Take a Chance on Me"as the last element.', () => {
+      let updatedRecord = updateRecords(5439, "tracks", "Take a Chance on Me");
 
-    expect(updatedRecord["5439"]["tracks"][0]).to.equal(
-      '"Take a Chance on Me"'
-    );
+      expect(updatedRecord["5439"]["tracks"][0]).to.equal(
+        "Take a Chance on Me"
+      );
+    });
 
-    updatedRecord = updateRecords(2548, "artist", "");
-    expect(updatedRecord["2548"]["artist"]).to.equal("");
+    it('After updateRecords(2548, "artist", ""), artist should not be set', () => {
+      let updatedRecord = updateRecords(2548, "artist", "");
+      expect(updatedRecord["2548"]["artist"]).to.equal(undefined);
+    });
 
-    updatedRecord = updateRecords(1245, "tracks", "Addicted to Love");
-    expect(updatedRecord[1245]["tracks"][0]).to.equal("Addicted to Love");
+    it('After updateRecords(1245, "tracks", "Addicted to Love"), tracks should have "Addicted to Love"as the last element', () => {
+      let updatedRecord = updateRecords(1245, "tracks", "Addicted to Love");
+      expect(updatedRecord[1245]["tracks"][0]).to.equal("Addicted to Love");
+    });
 
-    updatedRecord = updateRecords(2468, "tracks", "Free");
-    expect(updatedRecord[2468]["tracks"][0]).to.equal("1999");
+    it('After updateRecords(2468, "tracks", "Free"), tracks should have "1999" as the first element.', () => {
+      let updatedRecord = updateRecords(2468, "tracks", "Free");
+      expect(updatedRecord[2468]["tracks"][0]).to.equal("1999");
+    });
 
-    updatedRecord = updateRecords(2548, "tracks", "");
-    expect(updatedRecord[2548]["tracks"]).to.equal("");
+    it('After updateRecords(2548, "tracks", ""), tracks should not be set', () => {
+      let updatedRecord = updateRecords(2548, "tracks", "");
+      expect(updatedRecord[2548]["tracks"]).to.equal(undefined);
+    });
 
-    updatedRecord = updateRecords(1245, "album", "Riptide");
+    it('After updateRecords(1245, "album", "Riptide"), albums should be "Riptide"', () => {
+      let updatedRecord = updateRecords(1245, "album", "Riptide");
 
-    expect(updatedRecord[1245]["album"]).to.equal("Riptide");
+      expect(updatedRecord[1245]["album"]).to.equal("Riptide");
+    });
   });
 });
