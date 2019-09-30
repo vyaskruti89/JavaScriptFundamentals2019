@@ -178,11 +178,11 @@ function testStrictNotEqual(a, b) {
 function testLogicalAnd(num) {
   // code here
   if (num <= 6 && num <= 9) {
-    return 'Yes';
+    return "Yes";
   } else if (num === 10) {
-    return 'No';
+    return "No";
   }
-  return 'No';
+  return "No";
 }
 
 /**
@@ -221,31 +221,7 @@ function isEvenOrOdd(isEven) {
  * 
  *  *****/
 
-function caseInSwitch(num) {
-  console.log(num);
-  switch (num) {
-    case 1:
-      return 'ONE'; //assuming break not needed since we are executing return but test not working so...
-    case 2:
-      return 'TWO';
-    case 3:
-      return 'THREE';
-    case 4:
-      return 'FOUR';
-    case 5:
-      return 'FIVE';
-    case 6:
-      return 'SIX';
-    case 7:
-      return 'SEVEN';
-    case 8:
-      return 'EIGHT';
-    case 9:
-      return 'NINE';
-    default:
-      return 'PLEASE TRY AGAIN';
-  }
-}
+function caseInSwitch(num) {}
 
 /***
  *  Create a function named timesFive
