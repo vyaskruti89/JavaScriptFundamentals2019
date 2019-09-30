@@ -4,7 +4,7 @@
  */
 
 function createAnArray() {
-  let array = ["JavaScript"]; // Do not change this line
+  let array = ['JavaScript']; // Do not change this line
   /* Add three more items to the array here */
   return array;
 }
@@ -16,7 +16,7 @@ function createAnArray() {
  */
 
 function accessingAnArray() {
-  const cars = ["BMW", "Honda", "Civic"]; // Do not change this line
+  const cars = ['BMW', 'Honda', 'Civic']; // Do not change this line
   // Code here
 }
 
@@ -125,9 +125,9 @@ function removeDuplicates() {
 function accessObject() {
   // Do not change clothes here
   let clothes = {
-    hat: "ballcap",
-    shirt: "jersey",
-    shoes: "cleats"
+    hat: 'ballcap',
+    shirt: 'jersey',
+    shoes: 'cleats'
   };
   // Only change code below this line
   return;
@@ -142,8 +142,8 @@ function accessObject() {
 function createStudentObject() {
   // Do not change student here
   let student = {
-    firstName: "",
-    lastName: "",
+    firstName: '',
+    lastName: '',
     skills: []
   };
   // Add code here
@@ -171,8 +171,8 @@ function returnObjectProperties() {
   let dog = {
     tail: 1,
     legs: 4,
-    friends: ["Rusty", "Sparky"],
-    name: "Rocket"
+    friends: ['Rusty', 'Sparky'],
+    name: 'Rocket'
   };
   // Add code here
   // hint you need to return an array
@@ -207,35 +207,48 @@ function combineObject(obj1, obj2) {}
  *
  */
 
-function updateRecords(id, property, value) {
+function updateRecords(id, prop, value) {
   // Do not change collection here
 
   let collection = {
     // id
-    "2548": {
-      album: "Slippery When Wet",
-      artist: "Bon Jovi",
-      tracks: ["Let It Rock", "You Give Love a Bad Name"]
+    '2548': {
+      album: 'Slippery When Wet',
+      artist: 'Bon Jovi',
+      tracks: ['Let It Rock', 'You Give Love a Bad Name']
     },
     // id
-    "2468": {
-      album: "1999",
-      artist: "Prince",
-      tracks: ["1999", "Little Red Corvette"]
+    '2468': {
+      album: '1999',
+      artist: 'Prince',
+      tracks: ['1999', 'Little Red Corvette']
     },
     // id
-    "1245": {
-      artist: "Robert Palmer",
+    '1245': {
+      artist: 'Robert Palmer',
       tracks: []
     },
     // id
-    "5439": {
-      album: "ABBA Gold"
+    '5439': {
+      album: 'ABBA Gold'
     }
   };
   // Only change the code after this line
   // Logic Here
-  return collection; // You do not need to change this line.
+
+  if (prop === 'tracks' && value !== '') {
+    if (collection[id][prop]) {
+      collection[id][prop].push(value);
+    } else {
+      collection[id][prop] = [value];
+    }
+  } else if (value !== '') {
+    collection[id][prop] = value;
+  } else {
+    delete collection[id][prop];
+  }
+
+  return collection;
 }
 
 module.exports = {
