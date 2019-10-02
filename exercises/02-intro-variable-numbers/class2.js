@@ -7,36 +7,34 @@ function myName(name) {
 
 function setTeachersNames(teachersName) {
   // change code below this line so that we can set the variable.
-  const teachers = teachersName;
-    //  <- this is  invalid because teachers is a const. How can we fix this?
-
-  return teachers;
+  const teachers = null;
+ let myteachers = teachersName; //  <- this is  invalid because teachers is a const. How can we fix this?
+console.log(myteachers);
+  return myteachers;
 }
+console.log(setTeachersNames("Jamal Kruti Matina")); // Jamal and Matina
 
 /*** return the sum of both arguments  ***/
 function add(a, b) {
   let sum;
   sum = a+b;
-
   return sum;
 }
 
 /*** Using the increment operator, add a year to the argument and make me older */
-function ageMeByAYear(age) {
-  age++;
+function ageMeByAYear(age) { age++;
   return age;
 }
 
 /*** Using the decrement operator make me age decrement by a year  ***/
-function makeMeYoungerByAYear(age) {
-  age--;
+function makeMeYoungerByAYear(age) { age--;
   return age;
 }
 
 /** Take the argument that will be a string and return an integer  */
 function convertStringToInt(str) {
   let int;
-  int = parseInt(str,10);
+  int = parseInt(str);
   return int;
 }
 
@@ -49,10 +47,11 @@ function convertStringToInt(str) {
  *  return value should be 0
  *
  */
-function getTheCharacterPosition(name, letter) {
+function getTheCharacterPosition(name , letter) {
   let characterPosition;
 
   characterPosition = name.indexOf(letter);
+  console.log(characterPosition);
   return characterPosition;
 }
 
@@ -76,7 +75,7 @@ function stringLength(str) {
 function getLastCharacter(str) {
   let lastCharacter;
 
-  lastCharacter = str.charAt((stringLength(str))-1);
+  lastCharacter = lastCharacter[lastCharacter.length-1];
 
   return lastCharacter;
 }
@@ -96,12 +95,13 @@ function getLastCharacter(str) {
 function getLastWordInPlaceName(place) {
   let newPlace;
 
-  let words;
-  let lastWordPos;
+	let words;
+	let lastWordPos;
+	
+ words = place.split(" ");
+	lastWordPos = (words.length)-1;
+	newPlace = words[lastWordPos];
 
-  words = place.split(" ");
-  lastWordPos = (words.length)-1;
-  newPlace = words[lastWordPos];
 
   return newPlace;
 }
@@ -113,13 +113,13 @@ function getLastWordInPlaceName(place) {
 
 function getLargerNumber(arg1, arg2) {
   let largestNumber;
-  if(arg2>arg1){
-    largestNumber = arg2;
-  } else { largestNumber = null;
-  }
 
   return largestNumber;
 }
+ if(arg1>arg2){
+   largestNumber = arg1;
+ } else
+ { largestNumber = arg2;}
 
 /*** A person just got married and they need their last name replaced.
  * The function accepts two arguments first agrument being the fullname of the newlywed.
@@ -137,9 +137,9 @@ function replaceLastName(fullName, newLastName) {
   let newFullName;
 
   let words;
-  let name;
+  let names;
 
-  words = fullname.split(" ");
+  words = fullname,split("");
   name = words[0];
   newFullName = name.concat("",newLastName);
 
@@ -155,8 +155,9 @@ function capitalizeLastName(fullName) {
   let capitalizeLastName;
 
   let lastName;
-  lastName = getLastWordInPlaceName(fullName);
-  capitalizeLastName = replaceLastName(fullName,lastName[0].toUpperCase()+lastName.slice(1));
+
+  lastName = getLastWordInPlaceName(fullname);
+  capitalizeLastName = replaceLastName(fullName,lastName[0]. toUpperCase()+lastName,slice(1));
 
   return capitalizeLastName;
 }
@@ -167,11 +168,11 @@ function capitalizeLastName(fullName) {
  *
  */
 function compareEquality(a, b) {
-  if (a === b) {
+  if (a == b) {
     // Change this line
-    return "Equal";
+    return 'Equal';
   }
-  return "Not Equal";
+  return 'Not Equal';
 }
 
 /** The function should use the strict inequality operator
@@ -188,17 +189,17 @@ function compareEquality(a, b) {
 
 function testStrictNotEqual(a, b) {
   // Only Change Code Below this Line
-  if (a!==b) {
+  if(a!== b) {
     // Only Change Code Above this Line
 
-    return "Not Equal";
+    return 'Not Equal';
   }
-  return "Equal";
+  return 'Equal';
 }
 
 /***
  *  Refactor the code down below to use the logical && operator.
- *  This should return "Yes" when it is 6, 7, 8 and 9.
+ *  The should return "Yes" when it is 6, 7, 8 and 9.
  *  ```javascript
  *  testLogicalAnd(9); // should return "Yes"
  *  testLogicalAnd(6); // should return "Yes"
@@ -209,12 +210,14 @@ function testStrictNotEqual(a, b) {
  */
 
 function testLogicalAnd(num) {
-  if( num >5 && num <10){
-    return 'yes';
-  } else {
-    return 'no';
-  }
+  if (num > 5 && num <10){
+  return 'yes';
 }
+ else 
+{
+  return 'no';
+}
+
 
 /**
  * Refactor the code down below to use the logical || operator
@@ -226,7 +229,7 @@ function testLogicalAnd(num) {
  */
 
 function testLogicalOr(num) {
-  if (num == 20 || num == 25) {
+  if (num == 20 || num == 25){
     return 'yes';
   } else {
     return 'no';
@@ -236,12 +239,11 @@ function testLogicalOr(num) {
 /** Using the modulus operator determine if the argument is an even or odd number */
 
 function isEvenOrOdd(isEven) {
-
-  if (isEven % 2 == 0) {
-    return 'true';
-  } else {
-    return 'false';
+  if(isEven % 2 == 0){
+  return true;}
+  else { return false;
   }
+  
   return isEven;
 }
 
@@ -263,12 +265,14 @@ function isEvenOrOdd(isEven) {
  *  *****/
 
 function caseInSwitch(num) {
-  let words = ['one','two','three','four','five','six','seven','eight','nine','please try again'];
-  if( num > 0 && num <10){
-    return words[num-1];
-  } else {
-    return words [9];
-  }
+  let words = 
+  ['one','two','three','four','five','six','seven','eight','nine','none of above'];
+  if( num > 0 && num < 10){
+    return words[num - 1];
+} else 
+{
+  return words[9];
+}
 }
 
 /***
@@ -282,14 +286,15 @@ function caseInSwitch(num) {
  *   timesFive() should return 5
  *
  */
-function timesFive(num){
-  let result;
-  if (num == null){
-    num = 1;
-  }
-  result = num * 5;
-  return result;
-}
+	function timesFive(num){
+  	let result;
+  	if(num == null){
+  	num = 1;
+  	}
+  	result = num * 5;
+  	return result;
+  	}
+  
 /***
  *  create a function called lowerCaseName that will return the string lowerCased
  *   create two if statements. The first if statement will check for null or undefined and exit out of
@@ -301,15 +306,11 @@ function timesFive(num){
  *
  *
  */
-function lowerCaseName(name) {
-
-  if (name == null) {
+function lowerCaseName(str) {
+  if (!str) {
     return;
   }
-  if(typeof name === 'string'){
-    return name.toLocaleLowerCase();
-  }
-
+  if(typeof str === 'string') return str.toLowerCase();
 }
 
 let myExports = {
