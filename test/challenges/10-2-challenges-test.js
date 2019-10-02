@@ -14,8 +14,12 @@ describe("10-2-challenges", () => {
   });
 
   it("The function should uppercase the target word", () => {
-    expect(uppercaseTargetWord("first second third", 2)).to.equal("SECOND");
-    expect(uppercaseTargetWord("white yellow red", 2)).to.equal("YELLOW");
+    expect(uppercaseTargetWord("first second third", 2)).to.equal(
+      "first SECOND third"
+    );
+    expect(uppercaseTargetWord("white yellow red", 2)).to.equal(
+      "white YELLOW red"
+    );
     expect(uppercaseTargetWord("lunch dinner", 5)).to.equal(undefined);
   });
 });

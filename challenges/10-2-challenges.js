@@ -16,7 +16,7 @@ function createAnArray() {}
 
 /***
  *   The function will accept two arguments: the string and the target.
- *   Uppercase the target word.
+ *   Uppercase the target word in the string.
  *   If the target exceeds the length of the string, return undefined.
  *
  *
@@ -24,8 +24,8 @@ function createAnArray() {}
  *   use the Split method
  *
  *   @example
- *   uppercaseTargetWord("first second third", 2) // returns "SECOND"
- *   uppercaseTargetWord("Javascript is cool", 3) // returns "COOL"
+ *   uppercaseTargetWord("first second third", 2) // returns "first SECOND third"
+ *   uppercaseTargetWord("Javascript is cool", 3) // returns "Javascript is COOL"
  *   uppercaseTargetWord("Javascript is not cool", 5) // returns undefined
  *
  *
