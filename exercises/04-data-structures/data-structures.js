@@ -39,12 +39,7 @@ function accessingAnArray() {
 
 function addFunctionsIntoArray() {
   // Create and return an array here
-  function sum (){ addFunctionsIntoArray()[0](10, 10);}
 
-  function difference (){ addFunctionsIntoArray()[1](10,10);
-}
-const array = [ function sum (){ addFunctionsIntoArray()[0](10, 10), function difference (){ addFunctionsIntoArray()[1](10, 10)];
-console.log(array);
 
 /**
  * Loop through the array using a for loop (or for ... of loop) and return the highest number
@@ -117,7 +112,15 @@ console.log(array)
  * // Please note, the loop never iterates over the last item, because we found our object. There is no need to continue looping.
  */
 
-function findAndAbort(arr, id) {}
+function findAndAbort(arr, id) {
+
+  let obj = {};
+  for (let item of arr){
+    if(item.id === id){
+      return item
+    }
+  }
+}
 
 /**
  * A palindrome is a word, phrase, or sequence that reads the same backward as forward, e.g., madam or racecar.
