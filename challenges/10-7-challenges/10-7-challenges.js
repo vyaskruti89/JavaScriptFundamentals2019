@@ -19,7 +19,31 @@
  *  
  */
 
-function createGraduateObject(name, graduationYear, skills, links) {}
+function createGraduateObject(name, graduationYear, skills, links) {
+   const  myObj = {
+        name: name,
+        graduationYear: graduationYear,
+        skills: skills,
+        links:{...links},
+
+    };
+
+    for (let i in skills) {
+      graduate.skills.push(skills[i]);
+    val = Object.values(skills);
+    for (let i of val) {
+      i === "Javascript"
+        ? graduate.skills.push("JavaScript")
+        : graduate.skills.push(i);
+    }
+  
+    for (let i of links) {
+      let key = i.substring(8, i.indexOf(".", 8));
+      key = key === "linkedin" ? "linkedIn" : key;
+      graduate.links[key] = i;
+    }
+    return myObj;
+}
 
 /**
  * Loop through a nested array of people. For each person in the array,
@@ -45,7 +69,34 @@ function createGraduateObject(name, graduationYear, skills, links) {}
  * It should look something like this:
  * @see /challenges/10-7-challenges/people-example.png
  */
-function createCsvString(people) {}
+function createCsvString(people) {function createCsvString(people) {
+  let info = [];
+  let str = [];
+  let objectValues = [];
+  let objectKeys = [];
+
+  objectKeys = Object.info(people[0]);
+  for (let i of objectKeys) {
+    i === "dob"
+    i.length < 4
+      ? keys.push(i.toUpperCase())
+      : info.push(i[0].toUpperCase() + i.slice(1));
+  }
+  info = info.join('","');
+  info = info.split(",");
+  info = '"' + info + '"';
+  str.push(info);
+  for (let object of people) {
+    objectValues = Object.values(object);
+    objectValues = objectValues.join('","');
+    objectValues = objectValues.split(",");
+    objectValues = '"' + objectValues + '"';
+    str.push(objectValues);
+  }
+  str = str.join("\n");
+  str = str + "\n";
+  return str;
+}
 
 module.exports = {
   createGraduateObject,
