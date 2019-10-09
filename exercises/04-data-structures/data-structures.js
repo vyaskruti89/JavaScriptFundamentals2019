@@ -69,13 +69,6 @@ function highestNumber(array) {
  * combineArray(['Japan','China','India'], ['USA','UK']) // ['Japan','China','India','USA','UK']
  **/
 
-function combineArray(array1, array2) {
-  const array1 =['Japan','China','India'];
-  const array2 = ['USA','UK'];
-}
-const array = [...array1,array2];
-console.log(array)
-
 /**
  * Given an array of objects, where each object has an ID,
  * loop through an array using a for loop (or for ... of loop).
@@ -279,4 +272,4 @@ module.exports = {
   updateRecords,
   findAndAbort,
   addFunctionsIntoArray
-};
+}
