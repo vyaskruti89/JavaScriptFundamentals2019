@@ -4,7 +4,7 @@
  * @returns {number} number of digits
  *
  * @example
- * countNumberOfDigits(1); // 1
+ * countNumberOfDigits(1); // 11
  * countNumberOfDigits(123); // 3
  * countNumberOfDigits(1000); // 4
  */
