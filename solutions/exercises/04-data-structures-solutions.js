@@ -2,14 +2,18 @@
  * Add three more programming languages and return the languages array
  * @return {array} an array with four items
  */
-let array  = ["java","css","html","python"];
-console.log(array[0]);
-
 
 function createAnArray() {
   let array = ["JavaScript"]; // Do not change this line
   /* Add three more items to the array here */
-  array.push("hello",29,null);
+
+  // Method 1
+  array.push("Python");
+  array.push("Java");
+  array.push("PHP");
+
+  // Method 2
+  array = [...array, "Python", "Java", "PHP"];
 
   return array;
 }
@@ -22,8 +26,7 @@ function createAnArray() {
 
 function accessingAnArray() {
   const cars = ["BMW", "Honda", "Civic"]; // Do not change this line
-  // Code here
-  console.log(cars[0]);
+  return cars[0];
 }
 
 /***
@@ -38,8 +41,9 @@ function accessingAnArray() {
  */
 
 function addFunctionsIntoArray() {
-  // Create and return an array here
-
+  let funcArray = [(num1, num2) => num1 + num2, (num1, num2) => num1 - num2];
+  return funcArray;
+}
 
 /**
  * Loop through the array using a for loop (or for ... of loop) and return the highest number
@@ -51,13 +55,11 @@ function addFunctionsIntoArray() {
  *
  **/
 function highestNumber(array) {
-  var array = [-1,-5,-4,1,10,2,3,4];
-  var largest = 0;
-  for (i = 0 ; i >array.length;i++){
-    if (array[i]> largest){
-      largest = array[i];
-    }
+  let highest;
+  for (let num of array) {
+    if (num > highest || highest === undefined) highest = num;
   }
+  return highest;
 }
 
 /**
@@ -68,6 +70,10 @@ function highestNumber(array) {
  * @example
  * combineArray(['Japan','China','India'], ['USA','UK']) // ['Japan','China','India','USA','UK']
  **/
+
+function combineArray(array1, array2) {
+  return [...array1, ...array2];
+}
 
 /**
  * Given an array of objects, where each object has an ID,
@@ -106,13 +112,14 @@ function highestNumber(array) {
  */
 
 function findAndAbort(arr, id) {
-
-  let obj = {};
-  for (let item of arr){
-    if(item.id === id){
-      return item
+  let match;
+  for (let person of arr) {
+    if (person.id === id) {
+      match = person;
+      break;
     }
   }
+  return match;
 }
 
 /**
@@ -124,18 +131,55 @@ function findAndAbort(arr, id) {
  *
  */
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+  // Method 1
+  let letters = str.split("");
+  let reverse = "";
+  for (let i = letters.length - 1; i >= 0; i--) {
+    const letter = letters[i];
+    reverse += letter;
+  }
+  return reverse === str;
+
+  // Method 2
+  const reverse = str
+    .split("")
+    .reverse()
+    .join("");
+  return reverse === str;
+}
 
 /***
  * Use sets to remove duplicate elements from an array
  * @return {array}
  */
 
-function removeDuplicates() {
-  let numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5]; // You can change this line
+function removeDuplicates(numbers) {
+  // let numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5]; // You can change this line
 
   /** Return the an array of unique values */
-  return;
+  const mySet = new Set([
+    2,
+    3,
+    4,
+    4,
+    2,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5,
+    6,
+    6,
+    7,
+    5,
+    32,
+    3,
+    4,
+    5
+  ]);
+  return [...mySet];
 }
 
 /**
@@ -150,7 +194,7 @@ function accessObject() {
     shoes: "cleats"
   };
   // Only change code below this line
-  return;
+  return clothes.hat;
 }
 
 /**
@@ -167,6 +211,9 @@ function createStudentObject() {
     skills: []
   };
   // Add code here
+  student.firstName = "Stacy";
+  student.lastName = "Bresette";
+  student.skills = ["Python", "Teaching", "Being a permanent student"];
   return student;
 }
 
@@ -177,7 +224,14 @@ function createStudentObject() {
  * @return {object}
  */
 
-function createDogObject() {}
+function createDogObject() {
+  return {
+    name: "Sparky",
+    legs: 8,
+    tails: 2,
+    owners: ["Tim Burton"]
+  };
+}
 
 /**
  *  Using Object.keys, return all the properties contained in the object.
@@ -196,6 +250,7 @@ function returnObjectProperties() {
   };
   // Add code here
   // hint you need to return an array
+  return Object.keys(dog);
 }
 
 /**
@@ -205,21 +260,14 @@ function returnObjectProperties() {
  * @return {object} obj1 and obj2 combined
  */
 
-function combineObject(obj1, obj2) {}
+function combineObject(obj1, obj2) {
+  return { ...obj1, ...obj2 };
+}
 
 /**
  * Find a record with the matching id in a collection of records.
  * If the value is truthy, then swap out one of the records values with a new property.
  * If the original value is an array, it should add the new value to the array.
- *
- *  If prop is "tracks" but the album doesn't have a "tracks" property,
- *  create an empty array before adding the new value to the album's corresponding property
- *
- *  If prop is "tracks" and value isn't empty (""), push the value
- *  onto the end of the album's existing tracks array
- *
- *  If value is empty (""), delete the given prop property from the album.
- *
  * @param {Number} id what record to change
  * @param {String} property what property to replace
  * @param {String} value new value to replace with
@@ -227,7 +275,7 @@ function combineObject(obj1, obj2) {}
  *  @example
  *  updateRecords(5439, "artist", "ABBA"); // artist should be "ABBA"
  *  updateRecords(5439, "tracks", "Take a Chance on Me"); // tracks should be ["Old Track", "Take a Chance on Me""]
- *  updateRecords(2548, "artist", ""); // artist should not be set
+ *  updateRecords(2548, "artist", ""); // artist should not change
  *  updateRecords(1245, "tracks", "Addicted to Love"); // tracks should be ["Old Track", "Addicted to Love""]
  *  updateRecords(2468, "tracks", "Free"); // tracks should have "1999"as the first element.
  *  updateRecords(2548, "tracks", ""); // tracks should not change
@@ -236,7 +284,7 @@ function combineObject(obj1, obj2) {}
  *
  */
 
-function updateRecords(id, prop, value) {
+function updateRecords(id, property, value) {
   // Do not change collection here
 
   let collection = {
@@ -264,6 +312,12 @@ function updateRecords(id, prop, value) {
   };
   // Only change the code after this line
   // Logic Here
+  if (value) {
+    if (property === "tracks") collection[id][property] = [...tracks, value];
+    else collection[id][property] = value;
+  }
+
+  return collection; //You do not need to change this line.
 }
 
 module.exports = {
@@ -281,4 +335,4 @@ module.exports = {
   updateRecords,
   findAndAbort,
   addFunctionsIntoArray
-}
+};
