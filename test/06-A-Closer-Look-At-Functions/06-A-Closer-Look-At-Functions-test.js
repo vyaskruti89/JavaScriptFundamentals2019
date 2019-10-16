@@ -157,7 +157,7 @@ describe("Callbacks", () => {
   });
 });
 
-describe.only("forEach", () => {
+describe("forEach", () => {
   it("tests forEach", () => {
     let numbersDoubled = [];
     let suppliedArr = [];
