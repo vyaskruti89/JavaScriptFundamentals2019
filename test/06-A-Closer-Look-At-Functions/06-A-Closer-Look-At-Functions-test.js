@@ -27,15 +27,15 @@ describe("Functions", () => {
     const obj = objectMaker();
     expect(Object.keys(obj)[0]).to.equal("name");
   });
+});
 
+describe("groceryList", () => {
   it("should return a list of items when calling on get getList is called", () => {
     const groceryListObj = groceryList();
     groceryListObj.add("pears");
     expect(groceryListObj.getList().length).to.equal(1);
   });
-});
 
-describe("groceryList", () => {
   it("should add an item to the grocery list when the method add is called", () => {
     const groceryListObj = groceryList();
     groceryListObj.add("pears");
@@ -50,7 +50,6 @@ describe("groceryList", () => {
     groceryListObj.add("orange");
     groceryListObj.add("apples");
     groceryListObj.remove(2);
-    console.log(groceryListObj.getList());
     expect(groceryListObj.getList().length).to.equal(2);
   });
 });
