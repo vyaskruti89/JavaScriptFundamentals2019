@@ -7,7 +7,12 @@
  *
  */
 
-function objectMaker() {}
+function objectMaker(name) {
+  var obj = {
+    name:'matina'
+  };
+  return obj
+}
 
 /**
  *  As a programmer, I would like to be able to call on a function that returns an object that will allow me to
@@ -132,8 +137,10 @@ const multiplier = (a, b) => {};
  *  - Matina
  *  - Eddy
  * @param {string} name instuctor name
- */
-const printer = () => {};
+ */ 
+const printer = (name) => {
+  console.log(`- ${name}`)
+};
 
 /**
  * Loops through the array of strings
@@ -141,7 +148,13 @@ const printer = () => {};
  * @param {array}
  * @param {function} callback printer function
  */
-const printNames = () => {};
+const printNames = (name,callback) => {
+
+  for(let i = 0 ; i < name.length; i++){
+    callback(name)
+
+  }
+};
 
 /*** callback ends */
 
