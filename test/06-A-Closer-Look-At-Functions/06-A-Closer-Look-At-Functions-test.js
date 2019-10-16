@@ -29,21 +29,21 @@ describe("Functions", () => {
     const obj = objectMaker();
     expect(Object.keys(obj)[0]).to.equal("name");
   });
-
-  it("should return a list of items when calling on get getList is called", () => {
-    const groceryListObj = groceryList();
-    groceryListObj.add("pears");
-    expect(groceryListObj.getGroceryList().length).to.equal(1);
-  });
 });
 
 describe("groceryList", () => {
+  it("should return a list of items when calling on get getList is called", () => {
+    const groceryListObj = groceryList();
+    groceryListObj.add("pears");
+    expect(groceryListObj.getList().length).to.equal(1);
+  });
+
   it("should add an item to the grocery list when the method add is called", () => {
     const groceryListObj = groceryList();
     groceryListObj.add("pears");
     groceryListObj.add("orange");
     groceryListObj.add("apples");
-    expect(groceryListObj.getGroceryList().length).to.equal(3);
+    expect(groceryListObj.getList().length).to.equal(3);
   });
 
   it("should remove the correct item based off of the argument given when method remove is called", () => {
@@ -51,9 +51,8 @@ describe("groceryList", () => {
     groceryListObj.add("pears");
     groceryListObj.add("orange");
     groceryListObj.add("apples");
-    groceryListObj.removeItem(2);
-    console.log(groceryListObj.getGroceryList());
-    expect(groceryListObj.getGroceryList().length).to.equal(2);
+    groceryListObj.remove(2);
+    expect(groceryListObj.getList().length).to.equal(2);
   });
 });
 
