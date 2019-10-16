@@ -1,6 +1,7 @@
 const chai = require("chai");
 const expect = chai.expect;
 const sinon = require("sinon");
+chai.use(require("chai-arrays"));
 
 const {
   objectMaker,
@@ -156,7 +157,7 @@ describe("Callbacks", () => {
   });
 });
 
-describe("forEach", () => {
+describe.only("forEach", () => {
   it("tests forEach", () => {
     let numbersDoubled = [];
     let suppliedArr = [];
