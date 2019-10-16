@@ -167,6 +167,8 @@ const forEach = (arr, callback) => {};
  */
 const showFirstAndLast = arr => {};
 
+/***ForEach ends */
+
 /**
  * Recreate the map function
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
