@@ -1,5 +1,5 @@
 /***
- *
+ *  a test
  *  Create a function that  returns an object.
  *  The object will be a simple object with just the key being name and the value being the students name
  *   objectMaker() // {'name':'matina'}
@@ -165,7 +165,15 @@ const forEach = (arr, callback) => {};
  *   showFirstAndLast(['colt','matt', 'tim', 'udemy']); // ["ct", "mt", "tm", "uy"]
  *   showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
  */
-const showFirstAndLast = arr => {};
+const showFirstAndLast = arr => {
+  let newArray = [];
+  for (let item of arr) {
+    const first = item[0];
+    const last = item[item.length - 1];
+    newArray.push(`${first}${last}`);
+  }
+  return newArray;
+};
 
 /***ForEach ends */
 
