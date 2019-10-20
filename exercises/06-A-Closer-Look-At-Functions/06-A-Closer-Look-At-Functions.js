@@ -165,15 +165,7 @@ const forEach = (arr, callback) => {};
  *   showFirstAndLast(['colt','matt', 'tim', 'udemy']); // ["ct", "mt", "tm", "uy"]
  *   showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
  */
-const showFirstAndLast = arr => {
-  let newArray = [];
-  for (let item of arr) {
-    const first = item[0];
-    const last = item[item.length - 1];
-    newArray.push(`${first}${last}`);
-  }
-  return newArray;
-};
+const showFirstAndLast = arr => {};
 
 /***ForEach ends */
 
