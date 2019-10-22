@@ -109,6 +109,12 @@ While you will not fail if you do not meet these quality requirements, we will a
 
 ### Hints
 
+- If you need to cheat so that you can develop and test a winning round, temporarily make your word bank a single word you know. For example, you can do this (but be sure to undo when you commit your code):
+```javascript
+const prompt = require("readline-sync");
+// const wordBank = require("./word-bank.json");
+const wordBank = ["win"];
+```
 - I completed this project with a _while_ loop.
 - You can pick a random word with _Math.random_.
 
