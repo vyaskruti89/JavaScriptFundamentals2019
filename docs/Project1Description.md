@@ -130,6 +130,9 @@ const wordBank = ["win"];
 if (/[a-zA-Z]/.test(userInput)) {
   // Do something in here
   console.log("This is a letter");
+} else if (!/[^a-zA-Z]/.test(userInput)) {
+  // Do something here
+  console.log("This is NOT a letter");
 }
 ```
 
