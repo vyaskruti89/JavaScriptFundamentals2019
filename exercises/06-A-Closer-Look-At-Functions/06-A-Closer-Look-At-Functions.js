@@ -168,7 +168,12 @@ const printNames = (name,callback) => {
  * @param {array} arr
  * @param {function} callback
  */
-const forEach = (arr, callback) => {};
+
+const forEach = (arr, callback) => {
+  for(let i = 0; i< arr.length; i++){
+    callback(arr[i],i,arr);
+  }
+};
 
 /**
  * Given an array of strings, remove all letters of each value except the first and last character in the strings
@@ -178,7 +183,24 @@ const forEach = (arr, callback) => {};
  *   showFirstAndLast(['colt','matt', 'tim', 'udemy']); // ["ct", "mt", "tm", "uy"]
  *   showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
  */
-const showFirstAndLast = arr => {};
+const showFirstAndLast = arr => {
+  let newArray = [];
+  for (let item of arr) {
+    const first = item[0];
+    const last = item[item.length - 1];
+    newArray.push(`${first}${last}`);
+  }
+  return newArray;
+}
+/** 
+const showFirstAndLast = arr => {
+    var newArray = [];
+    arr.forEach((word) => {
+  
+   newArray.push( word(0, 1) + word.(word.length -1));
+    return newArray;
+  };
+ */
 
 /***ForEach ends */
 
@@ -189,14 +211,44 @@ const showFirstAndLast = arr => {};
  * @param {function} callback
  * @returns {array} new array
  */
-const map = (arr, callback) => {};
+const map = (arr, callback) => {
+  var newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+      
+      const resultOfCallback = callback(arr[i], i, arr);
+      newArray.push(resultOfCallback)
+      
+    }
+    return newArray;
+};
+/**
+ * 
+ * console.log(map(nouns, (noun, index, originalArray) => {
+    console.log(index);
+    console.log(originalArray);
+    return noun + 's';
+
+})); // ["dogs", "shoes", "cats"]
+
+console.log(map(nouns, (noun, index, originalArray) => {
+    console.log(index);
+    console.log(originalArray);
+    return noun[0].toUpperCase() + noun.substring(1);
+
+})); // ["Dog", "Shoe", "Cat"] 
+ */
 
 /**
  * Multiplies each value in an array by two
  * @param {array} arr an array of numbers e.g. [1, 3, 5]
  * @returns {array} new array, with each value doubled e.g. [2, 5, 10]
  */
-const doubleValues = arr => {};
+const doubleValues = arr => {
+  
+  return  arr.map(x => x * 2);
+  
+  
+};
 
 /**
  * Given an array nested with objects
@@ -216,7 +268,9 @@ const doubleValues = arr => {};
  * ];
  * extractKey(arrayOfNames, 'name'); // ['Ellie', 'Tim', 'Matt', 'Colt']
  */
-const extractKey = (arr, key) => {};
+const extractKey = (arr, key) => {
+  
+};
 
 /**
  * Build your own filter function
