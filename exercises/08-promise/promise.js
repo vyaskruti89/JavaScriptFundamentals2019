@@ -28,7 +28,16 @@
  *
  * @returns {Promise} which will resolve to the JSON above.
  */
-const getBooksApi = () => {};
+const getBooksApi = () => {
+  return new Promise ((resolve, reject)=>{
+    window.setTimeout(()=>{
+      resolve ({data});
+    },50);
+  });
+};
+getBooksApi()
+.then(data => console.log(da
+.catch(()=>console.log("promise");
 
 /**
  * @var {array} data an array of graphic novels
