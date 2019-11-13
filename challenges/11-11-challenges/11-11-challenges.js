@@ -8,10 +8,18 @@
  *
  * When the user clicks on the "View Comments" button, the comment section should appear.
  * Right now, the comments are hidden because they have the class ".hidden".
- *
+ * 
+ * 
  * BONUS: Clicking on the button should toggle instead of just show the comments.
  * If the comments are open, change the button text from "View Comments" to "Hide Comments".
  */
+const showcomment = document.querySelector("#comment");
+showcomment.addEventListener ("click",() => {
+    const comments = document.querySelector("#mycomment");
+    comments.classList.remove("hidden");
+
+});
+
 
 /**
  * Challenge 2: Display the results of the world's most pointless search engine.
