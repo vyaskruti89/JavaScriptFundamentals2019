@@ -54,4 +54,4 @@ const getAxionsRequest = (url,callback) =>
    getAxionsRequest('https://rickandmortyapi.com/api/character', populatedropdown);
 
 
-}
+};

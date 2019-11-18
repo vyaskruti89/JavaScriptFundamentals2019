@@ -9,3 +9,18 @@
  * This is the API you will be using. The method will be GET.
  * https://ron-swanson-quotes.herokuapp.com/v2/quotes
  */
+const  getData = async () => {
+    let data;
+    try {
+        data = await axios.get("https/dog.ceo/api/");
+        return data;
+    }
+    catch (err) {
+        console.log(err)
+    }
+   
+    const globaldata = await  asyncExample();
+    console.log(globaldata.data);
+    //console.log(await getrequest());
+ //return "finish";
+};
