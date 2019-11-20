@@ -1,6 +1,7 @@
-/*** As a user, I would like to be able to see my weather forecast for the day */
+/*** As a user, I would like to be able to see my weather forecast for the day , so I  can be informed about the weather.*/
 
 /** Developer notes:
+ *    Weather API: https://openweathermap.org/api
  *
  *  1) Retrieve the user's latitude and longitude by using this API: https://ipapi.co/json/
  *  2) Using the user's latitude and longitude return the weather using this API: api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}
