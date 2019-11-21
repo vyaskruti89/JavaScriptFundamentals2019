@@ -82,7 +82,7 @@ In order to run Webpack, we will need to create an npm script in the _package.js
 
 ```json
   "scripts": {
-    "start": "webpack"
+    "build": "webpack"
   },
 ```
 
