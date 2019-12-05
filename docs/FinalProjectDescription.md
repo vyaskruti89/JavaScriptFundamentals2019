@@ -1,6 +1,6 @@
 # Final Project Description
 
-**Due Date: December 20, 2019 11:59pm**
+**Due Date: January 10, 2019 11:59pm**
 
 You will be working in a group of two or three people. Everyone must write for code for this project. What the project will be is up to your group, but you must meet a list of technical requirements in order to pass. In January, you will be showing off your project to potential employers. You are required to attend.
 
