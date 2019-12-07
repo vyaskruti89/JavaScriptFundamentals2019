@@ -58,7 +58,7 @@ If Jamal and Matina deny your specification, you must pivot and use a third-part
 Your APIs (and back-end) must meet the following conditions:
 - You cannot use private resources like your web server on AWS or another host, your company’s web server, or database in the cloud. (You are permitted to write wrappers around public APIs and scrap popular websites for data). The reason for this is because if these resources go down, we do not want the other members in the group to suffer because they cannot show off their portfolio piece.
 - It must be self contained. That means that whatever code you write for your back-end to run must go in the project’s Github repository. You are allowed to mock data as long as you also include it in your Github repository.
-- It should not require numerous installations and it should take more than five minutes to get up and going. Jamal and Matina need to be able to grade your project in a timely manner.
+- It should not require numerous installations and it should not take more than five minutes to get up and going. Jamal and Matina need to be able to grade your project in a timely manner.
 - It must work on Mac OSX and Windows. (Also, possible Docker, but the Jury is still out for that).
 
 For those of you who want to write a back-end with Node.js, please note that we will not look at your back-end code, since it is out of scope. This means that **only your front-end code will count towards whether or not you pass.**
