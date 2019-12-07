@@ -53,6 +53,7 @@ You are permitted to write your own APIs (or back-end), but if you opt to do thi
 - Installation instructions (this can be brief).
 - A description of how or where you are going to get your data from.
 - Specifications on your APIs e.g. URLs, HTTP methods, example request bodies and example request responses with HTTP status codes.
+
 If Jamal and Matina deny your specification, you must pivot and use a third-party API.
 
 Your APIs (and back-end) must meet the following conditions:
