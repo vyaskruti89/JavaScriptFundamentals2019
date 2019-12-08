@@ -13,7 +13,7 @@ You must meet these requirements in order to pass.
 - You will need at least one API that will return images somewhere within the results. You must display images on the page from this API call.
 - You must store content in simple data structures (arrays, objects and sets).
 - Your code must contain at least one high order function with arrays (e.g. _Array.forEach_, _Array.map_, _Array.find_, _Array.filter_ and _Array.reduce_).
-- Your code should not have any Cross Site Scripting (XSS) vulnerabilities. If you convert a string into HTML at any point, you must use a [https://www.npmjs.com/search?q=xss](library) to sanitize the HTML.
+- Your code should not have any Cross Site Scripting (XSS) vulnerabilities. If you convert a string into HTML at any point, you must use a [library](https://www.npmjs.com/search?q=xss) to sanitize the HTML.
 - You must have at least one arrow function (but we encourage you to use more than that).
 - It will be an **automatic failure** if you use _var_.
 - You must show and hide DOM elements on the screen.
