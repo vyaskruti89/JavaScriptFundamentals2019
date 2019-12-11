@@ -21,8 +21,27 @@
 const { studentGrades } = require("../12-Module-Pattern/students");
 
 const TeacherGradeBook = (() => {
-  return {};
+  const gradeToPass = 65;
+
+  const averages = studentGrades.map(student => {
+    return {
+      average:
+        student.grades.reduce((acc, grade) => {
+          return acc + grade;
+        }, 0) / student.grades.length
+    };
+  });
+
+  return {
+    getFailingStudents: () => {
+      return averages.filter(student => student.average < gradeToPass);
+    },
+    getPassingStudents: () => {
+      return averages.filter(student => student.average > gradeToPass);
+    }
+  };
 })();
+
 
 module.exports = {
   TeacherGradeBook
